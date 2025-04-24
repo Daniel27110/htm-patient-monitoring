@@ -35,8 +35,9 @@ docker run -it htm-core-image bash
 Este proyecto incluye un notebook Jupyter llamado `desarollo_modelo.ipynb`, que contiene el utilizado para la construcción y evaluación de los modelos desarollados. Para ejecutar el notebook, asegúrese de que el contenedor esté en ejecución y luego ejecute el siguiente comando:
 
 ```bash
-docker run --rm -v "$PWD:/app" -w /app htm-core-image \
-    jupyter nbconvert --to notebook --execute --inplace desarollo_modelo.ipynb
+docker run -it -v $(pwd):/app/htm-patient-monitoring htm-core-image bash
+
+jupyter nbconvert --to notebook --execute --inplace htm-patient-monitoring/desarollo_modelo.ipynb
 ```
 
 ---
@@ -46,6 +47,8 @@ docker run --rm -v "$PWD:/app" -w /app htm-core-image \
 El script `ejecutar_modelo.py` es el encargado de ejecutar el modelo y realizar predicciones sobre los datos de un paciente específico. Para ejecutar este script, asegúrese de que el contenedor esté en ejecución y luego ejecute el siguiente comando:
 
 ```bash
-docker run --rm -v "$PWD:/app" -w /app htm-core-image \
-    python src/ejecutar_modelo.py
+docker run -it -v $(pwd):/app/htm-patient-monitoring htm-core-image bash
+
+python htm-patient-monitoring/ejecutar_modelo.py
+
 ```

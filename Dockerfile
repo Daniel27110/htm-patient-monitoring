@@ -33,7 +33,7 @@ RUN . .venv/bin/activate && \
     pip install matplotlib && \
     pip install numpy && \
     pip install scipy && \
-    pip install scikit-learn && \
+    pip install scikit-learn
 
     
 # Add virtualenv bin to PATH
