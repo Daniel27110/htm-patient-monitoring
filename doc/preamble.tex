@@ -1,0 +1,78 @@
+% Packages and setup code
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{pagecolor}
+\usepackage{chemformula}
+\usepackage{url}
+\usepackage{orcidlink}
+\usepackage{cleveref}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{appendix}
+\usepackage{svg}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage{helvet} % Use Helvetica font
+\usepackage[spanish, es-lcroman]{babel}
+\usepackage[explicit,compact]{titlesec}
+\usepackage[style=apa,backend=biber,sorting=nyt]{biblatex}
+
+% Extra resources
+\addbibresource{bibliography.bib} 
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  allcolors=black,
+  pdfborder={0 0 0},
+}
+
+% Page geometry
+\geometry{
+  a4paper,
+  left=3.2cm,
+  right=3.2cm,
+  top=3.2cm,
+  bottom=3.2cm,
+  headheight=10pt
+}
+
+% Define variables for Author Name and Thesis Title
+\newcommand{\AuthorName}{Daniel Felipe Vargas Ulloa}
+\newcommand{\ThesisTitle}{Uso de Modelos Predictivos para la Detección de Anomalías en Signos Vitales en Unidades de Cuidados Intensivos Pediátricos}
+
+% Modify chapter appearance
+\titleformat{\chapter}[block]
+    {\bfseries\huge}{\filright\LARGE\thechapter.}{1ex}{\huge\filright #1}
+
+% Add hyperlinks to citations using biblatex
+\DeclareFieldFormat{bibhyperrefnonest}{%
+  \DeclareFieldFormat{bibhyperref}{##1}%
+  \bibhyperref{#1}}
+
+\DeclareCiteCommand{\parencite}[\mkbibparens]
+  {\usebibmacro{cite:init}%
+   \usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperrefnonest]{\usebibmacro{cite}}}
+  {}
+  {\usebibmacro{postnote}%
+   \usebibmacro{cite:post}}
+
+\DeclareCiteCommand{\textcite}
+  {\usebibmacro{cite:init}%
+   \usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperrefnonest]{\usebibmacro{textcite}}}
+  {}
+  {\usebibmacro{textcite:postnote}%
+   \usebibmacro{cite:post}}
+
+% Increase spacing in Bibliography
+\setlength\bibitemsep{\baselineskip}
+
+\titlespacing*{\chapter}{0pt}{20pt}{10pt}
+
+\titlespacing*{\section}{0pt}{20pt}{10pt}

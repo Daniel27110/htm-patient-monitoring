@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper]{report}
+
+% Import preamble and setup code
+\input{preamble.tex}
+
+% Begin document
+\begin{document}
+
+% Title page
+\input{Cover/titlepage}
+
+% Table of Contents
+\tableofcontents{\protect\thispagestyle{empty}}
+\newpage
+
+% Roman numeral page numbering for front matter
+\pagenumbering{roman}
+
+% Abstract
+\input{Cover/abstract}
+
+% Resumen
+\input{Cover/resumen}
+
+
+% Switch to Arabic numerals starting from Chapter 1
+\newpage
+\pagenumbering{arabic}
+
+% Chapters
+\input{Chapters/Chapter1}
+\input{Chapters/Chapter2}
+\input{Chapters/Chapter3}
+\input{Chapters/Chapter4}
+\input{Chapters/Chapter5}
+\input{Chapters/Chapter6}
+\input{Chapters/Chapter7}
+
+% References
+\input{Chapters/Referencias}
+
+
+\end{document}
