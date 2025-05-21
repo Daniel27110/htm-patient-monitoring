@@ -4,7 +4,8 @@ El desarrollo de esta solución se basa en el trabajo previamente desarrollado p
 
 \vspace{0.5cm}
 
-\begin{center} \textbf{[Espacio reservado para el diagrama del sistema propuesto por Vargas (2023)]} \end{center}
+\begin{center} \textbf{[Espacio reservado para el diagrama del sistema propuesto por Vargas (2023)]}
+\end{center}
 
 \vspace{0.5cm}
 
@@ -16,9 +17,7 @@ Además, es necesario destacar otra desventaja crítica: el modelo de Vargas ide
 
 Por consiguiente, aunque el enfoque propuesto por Vargas representa un avance significativo en la automatización del análisis de signos vitales, este trabajo busca superar dichas limitaciones mediante un rediseño del sistema de detección, empleando una estrategia basada en detección de anomalías en subespacios (\textit{subspace anomaly detection}). Este enfoque permite asociar cada anomalía detectada con un subconjunto específico de las variables fisiológicas de entrada, brindando así mayor interpretabilidad respecto al origen de las anomalías detectadas. Adicionalmente, se incorporan elementos de contextualización clínica, como la edad del paciente, y, con ello, ajustar de forma más precisa el nivel de criticidad asociado a cada alerta generada. De este modo, el sistema no solo identifica la ocurrencia de una anomalía, sino que también asocia de forma explícita el conjunto de variables fisiológicas involucradas en dicha anomalía. Esta capacidad resulta fundamental para facilitar la comprensión clínica del evento, mejorar la toma de decisiones médicas y reducir la incidencia de alertas irrelevantes o poco informativas.
 
-
 \section{Recolección de información}
-
 
 Para el desarrollo y validación del sistema propuesto, se contó con registros clínicos reales proporcionados por la Unidad de Cuidados Intensivos Pediátricos (UCIP) del Hospital Militar Central de Bogotá. Estos datos fueron suministrados con el propósito de verificar la efectividad del modelo de detección de anomalías propuesto en un entorno clínico real, respetando los lineamientos éticos y de confidencialidad establecidos por la institución.
 
@@ -27,28 +26,22 @@ El conjunto de datos corresponde a pacientes pediátricos entre 12 y 16 años de
 Las variables registradas incluyen los siguientes signos vitales clave:
 
 \begin{itemize}
-    \item \textbf{FC}: Frecuencia Cardíaca, medida en latidos por minuto.
-    \item \textbf{SpO\textsubscript{2}}: Saturación de oxígeno en sangre, representada como un valor porcentual.
-    \item \textbf{Resp}: Frecuencia Respiratoria, en respiraciones por minuto.
-    \item \textbf{ARTs}: Presión Arterial Sistólica, medida en mmHg.
-    \item \textbf{ARTd}: Presión Arterial Diastólica, medida en mmHg.
+  \item \textbf{FC}: Frecuencia Cardíaca, medida en latidos por minuto.
+  \item \textbf{SpO\textsubscript{2}}: Saturación de oxígeno en sangre, representada como un valor porcentual.
+  \item \textbf{Resp}: Frecuencia Respiratoria, en respiraciones por minuto.
+  \item \textbf{ARTs}: Presión Arterial Sistólica, medida en mmHg.
+  \item \textbf{ARTd}: Presión Arterial Diastólica, medida en mmHg.
 \end{itemize}
-
-
 
 Estos parámetros (“FC”, “SpO\textsubscript{2}”, “Resp”, “ARTs” y “ARTd”) constituyen la base principal para evaluar de manera integral el estado hemodinámico y respiratorio del paciente, siendo indispensables tanto para la construcción como para la validación del modelo propuesto. Si bien se dispone también de registros de la presión arterial media (ARTm), esta magnitud muestra una correlación estadísticamente muy elevada con las presiones sistólica y diastólica —dado que se calcula habitualmente como:
 
 \[
-\mathrm{ARTm} \approx \frac{2\,\mathrm{ARTd} + \mathrm{ARTs}}{3}
+  \mathrm{ARTm} \approx \frac{2\,\mathrm{ARTd} + \mathrm{ARTs}}{3}
 \]
 
 por lo cual su inclusión aportaría información redundante en el modelo. De igual forma, se cuenta con registros de temperatura corporal en la mayoría de los pacientes; no obstante, como menciona \textcite{Vargas2023}, la temperatura, aunque clínicamente útil en otros contextos, no representa un indicador de alta relevancia para la detección temprana de eventos de deterioro en entornos de cuidados intensivos, donde sus variaciones tienden a ser leves y poco significativas. Por tal motivo, este indicador también fue excluido de las variables de entrada.
 
 Por otro lado, vale la pena resaltar que estos datos recrean varios de los desafíos de la práctica hospitalaria, ya que incluyen lapsos de ausencia ocasionados por desconexiones temporales de los monitores o fallos en la captura de las señales. Dicha heterogeneidad en la disponibilidad y calidad de las mediciones demanda que el sistema sea robusto frente a conjuntos de datos incompletos o intermitentes, tal como ocurre en entornos clínicos. En total, se recopilaron aproximadamente 136 horas de registros distribuidos en ocho pacientes, lo que otorga una base representativa y sólida para evaluar la eficacia del método propuesto.
-
-
-
-
 
 \section{Alternativas de diseño}
 

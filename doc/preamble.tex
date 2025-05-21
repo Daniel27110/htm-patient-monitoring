@@ -15,13 +15,14 @@
 \usepackage{ragged2e}
 \usepackage{parskip}
 \usepackage{csquotes}
+\usepackage{bookmark}
 \usepackage{helvet} % Use Helvetica font
 \usepackage[spanish, es-lcroman]{babel}
 \usepackage[explicit,compact]{titlesec}
 \usepackage[style=apa,backend=biber,sorting=nyt]{biblatex}
 
 % Extra resources
-\addbibresource{bibliography.bib} 
+\addbibresource{bibliography.bib}
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
@@ -45,30 +46,30 @@
 
 % Modify chapter appearance
 \titleformat{\chapter}[block]
-    {\bfseries\huge}{\filright\LARGE\thechapter.}{1ex}{\huge\filright #1}
+{\bfseries\huge}{\filright\LARGE\thechapter.}{1ex}{\huge\filright#1}
 
 % Add hyperlinks to citations using biblatex
 \DeclareFieldFormat{bibhyperrefnonest}{%
   \DeclareFieldFormat{bibhyperref}{##1}%
-  \bibhyperref{#1}}
+\bibhyperref{#1}}
 
 \DeclareCiteCommand{\parencite}[\mkbibparens]
-  {\usebibmacro{cite:init}%
-   \usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-   \printtext[bibhyperrefnonest]{\usebibmacro{cite}}}
-  {}
-  {\usebibmacro{postnote}%
-   \usebibmacro{cite:post}}
+{\usebibmacro{cite:init}%
+\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+\printtext[bibhyperrefnonest]{\usebibmacro{cite}}}
+{}
+{\usebibmacro{postnote}%
+\usebibmacro{cite:post}}
 
 \DeclareCiteCommand{\textcite}
-  {\usebibmacro{cite:init}%
-   \usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-   \printtext[bibhyperrefnonest]{\usebibmacro{textcite}}}
-  {}
-  {\usebibmacro{textcite:postnote}%
-   \usebibmacro{cite:post}}
+{\usebibmacro{cite:init}%
+\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+\printtext[bibhyperrefnonest]{\usebibmacro{textcite}}}
+{}
+{\usebibmacro{textcite:postnote}%
+\usebibmacro{cite:post}}
 
 % Increase spacing in Bibliography
 \setlength\bibitemsep{\baselineskip}
