@@ -10,11 +10,14 @@
 \input{Cover/titlepage}
 
 % Table of Contents
-\tableofcontents{\protect\thispagestyle{empty}}
+\clearpage
+\pagestyle{empty}
+\tableofcontents
+\clearpage
+\pagestyle{plain}
 
 % Roman numeral page numbering for front matter
 \pagenumbering{roman}
-\newpage
 
 % Abstract
 \input{Cover/abstract}
@@ -23,8 +26,8 @@
 \input{Cover/resumen}
 
 % Switch to Arabic numerals starting from Chapter 1
+\clearpage
 \pagenumbering{arabic}
-\newpage
 
 % Chapters
 \input{Chapters/Chapter1}

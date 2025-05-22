@@ -1,24 +1,27 @@
 \chapter{Requerimientos y Especificaciones}
 
-El desarrollo del sistema de monitoreo continuo para una UCIP requiere el establecimiento de especificaciones claras que permitan garantizar su funcionalidad, calidad y viabilidad en el entorno clínico. Estas especificaciones se clasifican a continuación en requerimientos funcionales y no funcionales.
+El diseño del sistema propuesto requiere una definición clara de los requerimientos necesarios para guiar su desarrollo, implementación y validación. Estos requerimientos se han clasificado en dos categorías: funcionales y no funcionales. Los primeros hacen referencia a las funcionalidades esperadas del sistema, es decir, qué debe hacer, mientras que los segundos abarcan las propiedades de calidad, restricciones metodológicas y criterios de desempeño que debe cumplir la solución.
 
 \section{Requerimientos funcionales}
 
-El sistema debe permitir la integración de sensores biométricos para la medición en tiempo real de signos vitales esenciales en la Unidad de Cuidados Intensivos Pediátricos del Hospital Militar Central de Bogotá. Estos signos vitales incluyen la presión arterial (sistólica y diastólica), la frecuencia respiratoria, la frecuencia cardíaca, la saturación de oxígeno y la temperatura corporal. La captura y el procesamiento de estas mediciones deben realizarse de manera continua, permitiendo la detección oportuna de anomalías.
+Los requerimientos funcionales están directamente relacionados con el procesamiento y análisis de los signos vitales de pacientes en la UCIP. Se dividen en requerimientos de entrada y salida, dada la naturaleza de transformación de datos que realiza el sistema:
 
-A partir de las lecturas continuas de los signos vitales, el sistema debe ser capaz de identificar si el paciente se encuentra en un estado fisiológico dentro de los rangos esperados según su comportamiento histórico, o si presenta desviaciones relevantes. En este contexto, se define una \textbf{anomalía} como una alteración simultánea en dos o más signos vitales respecto a los valores típicos del propio paciente, lo cual puede reflejar un cambio significativo en su condición clínica. Es importante destacar que un paciente puede entrar en un estado anómalo tanto por un deterioro como por una mejora repentina de su estado clínico, ya que ambas situaciones representan un cambio brusco en las mediciones de los signos vitales. La solución propuesta debe ser capaz de distinguir entre estos dos casos, utilizando como referencia los rangos de normalidad esperados para el paciente según su edad.
+\begin{itemize}
+  \item \textbf{Entrada:} El sistema debe ser capaz de recibir como entrada un conjunto de datos de monitoreo fisiológico previamente registrados. Estos datos deben incluir múltiples signos vitales por paciente, los cuales pueden presentar intermitencia o dejar de ser , dadas las condiciones dinámicas de atención clínica.
 
-Respecto a las salidas, el sistema debe ofrecer una visualización en tiempo real de los datos recopilados a través de interfaces gráficas intuitivas, facilitando la interpretación inmediata del estado del paciente y la toma de decisiones clínicas. Además, el sistema debe ser capaz de generar alertas automáticas cuando se detecten valores críticos o patrones anómalos en los signos vitales. La metodología empleada para estimar el nivel de criticidad de un paciente a partir de las anomalías detectadas se explicará con mayor detalle en una sección posterior. A continuación, se presenta la definición detallada de una alerta en este contexto.
+  \item \textbf{Procesamiento:} El sistema debe analizar de forma conjunta las distintas señales fisiológicas, sin necesidad de conocer con anterioridad cuántas ni cuáles están disponibles, y ser capaz de identificar anomalías dentro de su comportamiento. En este contexto, se define una anomalía como una alteración simultánea en dos o más signos vitales respecto a los valores típicos del propio paciente, lo cual puede reflejar un cambio significativo en su condición clínica. Es importante destacar que un paciente puede entrar en un estado anómalo tanto por un deterioro como por una mejora repentina de su estado clínico, ya que ambas situaciones representan un cambio brusco en las mediciones de los signos vitales. La solución propuesta debe ser capaz de distinguir entre estos dos casos, utilizando como referencia los rangos de normalidad esperados para el paciente según su edad.
 
-\paragraph{Alerta:} Una alerta es un mecanismo automatizado cuyo propósito es notificar al personal médico sobre la posible evolución de un paciente hacia un estado crítico. Estas alertas se determinan a partir de la detección de anomalías en los signos vitales y se clasifican en diferentes niveles de criticidad, lo que permite priorizar la atención de forma acorde a la gravedad de la situación.
+  \item \textbf{Salida:} El sistema debe ofrecer una visualización en tiempo real de los datos recopilados a través de interfaces gráficas intuitivas, facilitando la interpretación inmediata del estado del paciente y la toma de decisiones clínicas. Además, el sistema debe ser capaz de generar alertas en función de las anomalías detectadas en los signos vitales de cada paciente.
+
+\end{itemize}
 
 \section{Requerimientos no funcionales}
 
 Desde el punto de vista de calidad y desempeño, el sistema debe garantizar alta confiabilidad y disponibilidad, con tiempos de respuesta mínimos ante la detección de eventos críticos. En términos de seguridad y privacidad, el sistema debe cumplir con las normativas de protección de datos y seguridad informática aplicables en el ámbito hospitalario, de tal forma que la información sensible de los pacientes esté protegida contra accesos no autorizados.
 
-Otro aspecto clave es la interoperabilidad y usabilidad. La solución debe integrarse sin inconvenientes con los sistemas de gestión hospitalaria existentes, asegurando la compatibilidad con los dispositivos médicos en uso. La interfaz debe ser intuitiva y de fácil aprendizaje, minimizando la curva de adaptación para el personal de salud.
+Otro aspecto clave es la interoperabilidad y usabilidad. La solución debe integrarse sin inconvenientes con los sistemas de gestión hospitalaria existentes, asegurando la compatibilidad con los dispositivos médicos en uso. De igual forma, la interfaz desarrollada debe ser intuitiva y de fácil aprendizaje, minimizando la curva de adaptación para el personal de salud.
 
-Finalmente, respecto a la metodología de desarrollo, la solución plantea el uso de la metodología ágil CRISP-ML, la cual permite iteraciones rápidas y mejoras continuas basadas en la retroalimentación de los usuarios.
+Finalmente, en cuanto a la metodología de desarrollo, la solución debe construirse siguiendo un enfoque iterativo, que facilite iteraciones rápidas y mejoras continuas basadas en la retroalimentación de los profesionales de la salud.
 
 \medskip
 
@@ -26,16 +29,12 @@ Finalmente, respecto a la metodología de desarrollo, la solución plantea el us
 
 El desarrollo e implementación del sistema están sujetos a diversas restricciones que deben ser consideradas para garantizar su viabilidad y alineación con el contexto hospitalario.
 
-\medskip
+\begin{itemize}
 
-\subsection{Restricciones de salud y seguridad}
+  \item \textbf{Restricciones de salud y seguridad:} El sistema no debe interferir con la atención directa del paciente ni generar distracciones que puedan comprometer la seguridad del entorno clínico.
 
-El sistema no debe interferir con la atención directa del paciente ni generar distracciones que puedan comprometer la seguridad del entorno clínico.
+  \item \textbf{Restricciones tecnológicas:} La solución debe ser compatible con los dispositivos médicos y sistemas de gestión hospitalaria existentes, evitando la necesidad de reemplazos costosos o complejas integraciones.
 
-\medskip
-
-\subsection{Restricciones de mantenibilidad}
-
-La viabilidad de producción y mantenimiento del sistema debe ser evaluada para garantizar su sostenibilidad a lo largo del tiempo. Se debe priorizar el uso de tecnologías escalables y de fácil mantenimiento, minimizando la necesidad de interrupciones prolongadas en su funcionamiento para actualizaciones o reparaciones.
+\end{itemize}
 
 Las restricciones aquí planteadas definen los límites dentro de los cuales debe desarrollarse la solución y orientan la selección de tecnologías, metodologías y estrategias de implementación. El cumplimiento de estas consideraciones es fundamental para asegurar la viabilidad y efectividad del sistema en el contexto hospitalario de la UCIP.

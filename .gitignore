@@ -498,8 +498,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,windows,jupyternotebooks,latex,python
-
+# VsCode
+.vscode/
 
 # Patient files
 patient_data/
