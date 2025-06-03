@@ -4,7 +4,11 @@
 
 A diferencia de enfoques anteriores que analizaban todas las señales médicas como una única entrada conjunta, en este trabajo se propone una estrategia basada en la exploración de relaciones específicas entre variables fisiológicas. En lugar de tratar el conjunto de signos vitales como una entidad monolítica, se opta por aplicar un modelo de detección de anomalías a cada pareja de señales disponible. Es decir, se estudia cada combinación posible de dos señales fisiológicas como un subespacio independiente, lo que permite estudiar la forma en que se relacionan y evolucionan conjuntamente esas dos señales a lo largo del tiempo, capturando interacciones que pueden reflejar cambios fisiológicos relevantes en el estado del paciente.
 
-Concretamente, se analizan las parejas máximas (\textit{max pairs}) formadas a partir del conjunto total de signos vitales disponibles. Este concepto se refiere al número máximo de combinaciones posibles entre dos elementos de un conjunto, considerando todas las posibles parejas únicas sin repetición. Por ejemplo, si se cuentan con $n$ variables fisiológicas, se generan $\frac{n(n-1)}{2}$ subespacios, cada uno correspondiente a una pareja distinta. Cada uno de estos subespacios es procesado individualmente por el modelo de detección de anomalías basado en \textit{Hierarchical Temporal Memory }(HTM), lo que permite estudiar la dinámica particular entre esas dos señales.
+Concretamente, se analizan las parejas máximas (\textit{max pairs}) formadas a partir del conjunto total de signos vitales disponibles. Este concepto se refiere al número máximo de combinaciones posibles entre dos elementos de un conjunto, considerando todas las posibles parejas únicas sin repetición. Por ejemplo, si se cuentan con $n$ variables fisiológicas, se generan $\frac{n(n-1)}{2}$ subespacios, cada uno correspondiente a una pareja distinta. Cada uno de estos subespacios es procesado individualmente por el modelo de detección de anomalías basado en \textit{Hierarchical Temporal Memory }(HTM), lo que permite identificar patrones anómalos en la evolución conjunta de las dos señales fisiológicas a lo largo del tiempo.
+
+\section{Descripción del modelo}
+
+El modelo propuesto se basa en la arquitectura de \textit{Hierarchical Temporal Memory} (HTM), que es un enfoque inspirado en el funcionamiento del cerebro humano. HTM es particularmente adecuado para el análisis de datos temporales y secuenciales, lo que lo convierte en una opción ideal para el estudio de señales fisiológicas que varían con el tiempo. 
 
 \medskip
 
