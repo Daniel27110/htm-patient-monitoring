@@ -102,6 +102,9 @@ Supóngase que en un instante dado sólo se obtienen resultados de 3 de los 6 su
 En la última sección, el sistema presenta al personal médico un tablero de control que cumple las siguientes funciones:
 
 \begin{itemize}
-  \item \textbf{Monitoreo en Tiempo Real}: muestra, mediante gráficos de series temporales, la evolución simultánea de los diferentes signos vitales y el índice de criticidad del paciente.
-  \item \textbf{Notificaciones y Alertas}: visualiza de forma destacada el \emph{Nivel de criticidad Actual} junto con las parejas de señales responsables por generar la alerta.
+  \item \textbf{Monitoreo en Tiempo Real}: Muestra, mediante gráficos de series temporales, la evolución simultánea de los diferentes signos vitales y el índice de criticidad del paciente.
+  \item \textbf{Criticidad del Paciente}: Visualiza de forma destacada el \emph{Nivel de criticidad Actual} junto con las parejas de señales responsables de dicha puntuación. Esto permite al personal médico identificar rápidamente qué combinaciones de signos vitales están contribuyendo al estado crítico del paciente.
+  \item \textbf{Generación de Alertas}: Presenta alertas visuales cuando el nivel de criticidad supera un umbral predefinido, lo que indica que el paciente se encuentra en una situación de riesgo.
 \end{itemize}
+
+Dado que el índice de criticidad calculado por el sistema se encuentra normalizado en un rango entre 0 y 1, es posible establecer umbrales claros y objetivos para la generación de alertas clínicas. En particular, se propone definir tres niveles de alerta: bajo, medio y alto, en función del valor alcanzado por el indicador. Así, se considera que el paciente se encuentra en un estado de alerta baja cuando el índice de criticidad es inferior a 0.3; si el valor se sitúa entre 0.3 y 0.6, se clasifica como alerta media; y cuando el índice supera el umbral de 0.6, se activa una alerta alta, indicando una situación de riesgo significativo que requiere atención inmediata. Esta categorización facilita la interpretación rápida del estado del paciente por parte del personal médico y permite priorizar la respuesta clínica de acuerdo con la gravedad detectada por el sistema.
