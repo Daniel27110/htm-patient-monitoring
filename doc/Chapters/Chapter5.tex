@@ -13,7 +13,88 @@ El modelo propuesto se basa en la arquitectura de \textit{Hierarchical Temporal 
 El procesamiento de señales fisiológicas continuas plantea diversos desafíos intrínsecos que resulta dificil de manejar con modelos convencionales. Uno de los principales desafios es la presencia de ruido y artefactos. Esto se debe a que las señales biomédicas frecuentemente se ven contaminadas por interferencias eléctricas, movimientos del paciente o limitaciones de los propios sensores. Esto significa que los datos crudos pueden contener picos o fluctuaciones que no reflejan un cambio real en el estado del paciente, sino meras perturbaciones. HTM aborda esta dificultad gracias a su capacidad para aprender patrones temporales robustos. Al aprender la estructura temporal normal de la señal, el modelo puede identificar y tolerar cierto nivel de ruido, ya que estos no suelen formar parte de las secuencias coherentes aprendidas, permitiendo que el sistema se enfoque en desviaciones persistentes y significativas del comportamiento normal.
 
 Otro desafío importante es la detección de anomalías sutiles y de evolución lenta. No todas las condiciones críticas se manifiestan como cambios abruptos y evidentes en las señales. Algunas pueden comenzar como desviaciones pequeñas y graduales de la normalidad que, si bien individualmente pueden parecer insignificantes, acumuladas en el tiempo indican un problema emergente. Los métodos que se basan en umbrales fijos o que solo analizan signos vitales aislados pueden pasar por alto estas señales de alerta tempranas. La fortaleza de HTM en este aspecto radica en su capacidad para aprender y predecir secuencias temporales. Al modelar las dependencias temporales en los datos, HTM puede identificar patrones anómalos que se desarrollan a lo largo del tiempo, incluso si las desviaciones en cada punto individual son pequeñas \parencite{AHMAD2017134}
+
+Para la implementación práctica de este modelo, se empleó la librería \texttt{htm.core}, una librería de código abierto desarrollada en C++ y Python que implementa los algoritmos necesarios basados en la teoría HTM \parencite{htmcore2019}. Esta librería proporciona las herramientas necesarias para la codificación, aprendizaje y detección de anomalías en secuencias temporales, facilitando la integración de modelos HTM en aplicaciones de análisis de señales biomédicas.
+
+Respecto a los hiperparámetros utilizados en la configuración de los modelos HTM, se adoptaron los mismos valores reportados por \textcite{Vargas2023}, quien realizó una búsqueda extensiva de hiperparámetros para optimizar el desempeño en tareas de detección de anomalías en señales fisiológicas. Estos hiperparámetros se aplicaron de forma idéntica en cada uno de los subespacios analizados. No obstante, es importante destacar que la elección de estos valores puede ser ajustada en función de las características específicas de los signos vitales y del contexto clínico en el que se apliquen, permitiendo una personalización adicional del modelo para mejorar su rendimiento en situaciones particulares.
+
+A continuación, se presentan en detalle los hiperparámetros empleados en la implementación, organizados según los componentes principales del modelo HTM: el \textit{Spatial Pooler}, el \textit{Temporal Memory} y los parámetros de detección de anomalías. Las tablas incluyen una breve descripción de cada parámetro para facilitar su interpretación.
+
 \medskip
+
+% Tabla de hiperparámetros del Spatial Pooler
+Comenzando por el \textit{Spatial Pooler}, este es responsable de transformar la entrada de los dos signos vitales que conforman cada subespacio en una representación binaria, facilitando su procesamiento. Los parámetros utilizados se muestran en la Tabla~\ref{tab:spatial_pooler_params}.
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{l c p{7cm}}
+    \hline
+    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción sencilla} \\
+    \hline
+    columnDimensions & 2048 & Número de 'columnas', unidades que trabajan en paralelo para procesar la entrada. \\
+    sp\_stimulusThreshold & 5 & Cuántas señales activas necesita una columna para activarse. \\
+    sp\_synPermInactiveDec & 0.005 & Qué tanto se debilita una conexión si no se usa. \\
+    sp\_synPermActiveInc & 0.01 & Qué tanto se fortalece una conexión al ser usada. \\
+    sp\_synPermConnected & 0.2 & A partir de qué grado de fortalecimiento se considera que la conexión existe de verdad. \\
+    \hline
+  \end{tabular}
+  \caption{Parámetros del Spatial Pooler (SP).}
+  \label{tab:spatial_pooler_params}
+\end{table}
+
+\medskip
+
+% Tabla de hiperparámetros de Temporal Memory
+Como paso siguiente, el \textit{Temporal Memory} aprende secuencias temporales al ver qué señales vienen frecuentemente tras otras, y permite al modelo anticipar patrones futuros. Los parámetros utilizados se muestran en la Tabla~\ref{tab:tm_params}.
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{l c p{7cm}}
+    \hline
+    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción sencilla} \\
+    \hline
+    tm\_cellsPerColumn & 16 & Cuántas 'células' hay en cada columna para entender el contexto. \\
+    tm\_activationThreshold & 17 & Cuántas conexiones activas necesita una célula para activarse. \\
+    tm\_initialPermanence & 0.5 & Fuerza inicial de una conexión nueva. \\
+    tm\_minThreshold & 10 & Cuántas conexiones en un grupo se necesitan para que empiece a aprender. \\
+    tm\_maxNewSynapseCount & 32 & Cuántas conexiones nuevas puede crear cada grupo a la vez. \\
+    tm\_permanenceIncrement & 0.01 & Cuánto se fortalece una conexión cuando acierta. \\
+    tm\_permanenceDecrement & 0.1 & Cuánto se debilita cuando falla. \\
+    tm\_predictedSegmentDecrement & 0.001 & Pequeña reducción si algo se esperaba pero no ocurrió. \\
+    tm\_maxSegmentsPerCell & 128 & Máximo de grupos de conexiones por célula. \\
+    tm\_maxSynapsesPerSegment & 128 & Máximo de conexiones por grupo. \\
+    \hline
+  \end{tabular}
+  \caption{Parámetros del Temporal Memory (TM).}
+  \label{tab:tm_params}
+\end{table}
+
+\medskip
+
+% Tabla de hiperparámetros de detección de anomalías
+Finalmente, los parámetros específicos para la detección de anomalías determinan cómo se evalúan las desviaciones respecto a lo aprendido. Estos parámetros se muestran en la Tabla~\ref{tab:anomaly_params}.
+
+\begin{table}[H]
+  \centering
+  \small
+  \begin{tabular}{l c p{7cm}}
+    \hline
+    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción sencilla} \\
+    \hline
+    anom\_wait\_n & 120 & Cuántas muestras esperar antes de considerar una anomalía. \\
+    anom\_window & 120 & Cuántas muestras usar para calcular la puntuación de anomalía. \\
+    threshold & 0.1 & Valor mínimo para considerar que hay una anomalía. \\
+    \hline
+  \end{tabular}
+  \caption{Parámetros de la detección de anomalías.}
+  \label{tab:anomaly_params}
+\end{table}
+
+\medskip
+
+Estos parámetros permiten que el modelo HTM procese eficazmente las señales fisiológicas y detecte anomalías relevantes en cada subespacio definido por las parejas de signos vitales.
 
 \section{Flujo de datos en la arquitectura propuesta}
 
@@ -109,11 +190,12 @@ En la última sección, el sistema presenta al personal médico un tablero de co
 
 Dado que el índice de criticidad calculado por el sistema se encuentra normalizado en un rango entre 0 y 1, es posible establecer umbrales claros y objetivos para la generación de alertas clínicas. En particular, se propone definir tres niveles de alerta: bajo, medio y alto, en función del valor alcanzado por el indicador de criticidad del paciente. Dicho esto, se considera que el paciente se encuentra en un estado de alerta de nivel bajo cuando el índice de criticidad es inferior a 0.3; si el valor se sitúa entre 0.3 y 0.6, se clasifica como alerta de nivel medio; y cuando el índice supera el umbral de 0.6, se clasifica como una alert de nivel alto, indicando una situación de riesgo significativo que requiere atención inmediata. Esta categorización facilita la interpretación rápida del estado del paciente por parte del personal médico y permite priorizar la respuesta clínica de acuerdo con la gravedad detectada por el sistema.
 
-En la Figura \ref{fig:patient2_dashboard_baja_alerta} se presenta la visualización del tablero de control correspondiente al paciente 2 en un momento en el que el sistema considera que el nivel de alerta es bajo. En la parte izquierda del diagrama se observa claramente qué pareja de signos vitales está participando en la generación de la alerta; por ejemplo, la combinación de frecuencia cardíaca y frecuencia respiratoria muestra una criticidad moderada y mayor influencia en la criticidad del paciente, mientras que la pareja de frecuencia cardíaca y saturación de oxigeno presenta una criticidad baja. Esta visualización permite identificar de manera intuitiva no solo qué signos vitales están involucrados en la generación de cada alerta, sino también la severidad asociada a cada combinación, facilitando la priorización de la atención clínica.
+En la Figura \ref{fig:patient2_dashboard_baja_alerta} se presenta la visualización del tablero de control correspondiente al paciente 1 en un momento en el que el sistema considera que el nivel de alerta es bajo. En la parte izquierda del diagrama se observa claramente qué pareja de signos vitales está participando en la generación de la alerta; por ejemplo, la pareja que relaciona la frecuencia cardíaca y frecuencia respiratoria muestra una criticidad moderada y mayor influencia en la criticidad del paciente, mientras que la pareja de frecuencia cardíaca y saturación de oxigeno presenta una criticidad baja. Esta visualización permite identificar de manera intuitiva no solo qué signos vitales están involucrados en la generación de cada alerta, sino también la severidad asociada a cada combinación, facilitando la priorización de la atención clínica.
 
 En la parte derecha del tablero se encuentra la evolución temporal de los signos vitales seleccionados, presentada en un gráfico que permite al usuario ajustar fácilmente el periodo de tiempo visualizado. Esta funcionalidad es especialmente útil para analizar tendencias recientes o retrospectivas, apoyando la toma de decisiones informadas por parte del personal médico.
 
-\begin{figure}[ht] \centering \includegraphics[width=\textwidth]{Images/TableroControl.png} \caption{Visualización del tablero de control para el paciente 2 en estado de alerta baja.} \label{fig:patient2_dashboard_baja_alerta}
+\begin{figure}[ht] \centering \includegraphics[width=\textwidth]{Images/TableroControl2.png} \caption{Visualización del tablero de control para un instante intermedio del paciente 1 en estado de alerta baja.} \label{fig:patient2_dashboard_baja_alerta}
 \end{figure}
 
 De esta manera, el tablero de control proporciona una visión integral y configurable del estado del paciente, resaltando tanto las combinaciones de signos vitales más relevantes para la alerta actual como la evolución de los parámetros fisiológicos a lo largo del tiempo.
+
