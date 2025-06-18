@@ -4,18 +4,18 @@
 
 Para validar la eficacia del modelo de detección de anomalías en subespacios, se propone una metodología que evalúa sus resultados desde dos dimensiones complementarias: una cualitativa, orientada a la utilidad clínica de las alertas generadas, y otra cuantitativa, enfocada en la relación entre el indicador de criticidad desarrollado y el estado real del paciente medido a través de sus signos vitales.
 
-Primero, a nivel cualitativo se examinan las alertas generadas por el modelo de subespacios para determinar si proporcionan información útil, relevante y accionable para los profesionales de la salud. En este análisis se comparan las alertas de nuestro modelo con las alertas producidas por el modelo previo empleado sobre el mismo paciente en idénticos intervalos de tiempo. Para ello, se revisan los episodios críticos identificados por cada sistema y se evalúa si las nuevas alertas permiten: (1) anticipar de manera oportuna eventos de deterioro clínico, (2) ofrecer indicaciones claras sobre qué parámetro o combinación de parámetros está fuera de lo esperado y (3) orientar la toma de decisiones médicas de forma más precisa.
+Primero, a nivel cualitativo se examinan las alertas generadas por el modelo de subespacios para determinar si proporcionan información útil, relevante y accionable para los profesionales de la salud. En este análisis se comparan las alertas de nuestro modelo con las alertas producidas por el modelo previo empleado sobre el mismo paciente en idénticos intervalos de tiempo. Para ello, se revisan las alertas identificadas por cada sistema y se evalúa si las nuevas alertas permiten: (1) anticipar de manera oportuna eventos de deterioro clínico, (2) ofrecer indicaciones claras sobre qué parámetro o combinación de parámetros está fuera de lo esperado y (3) orientar la toma de decisiones médicas de forma más precisa.
 
 En segundo lugar, el análisis cuantitativo busca demostrar que las anomalías reportadas efectivamente coinciden con los momentos en los que el paciente experimenta mayor criticidad fisiológica. Para ello, se utiliza como referencia el número de signos vitales que, en un instante dado, se encuentran fuera de sus rangos normales definidos para la población pediátrica en la UCIP. Este conteo de parámetros alterados se registra segundo a segundo y se considera una medida objetivo para definir el estado del paciente. La Figura \ref{fig:patient3_signos_vitales_fuera_de_rango}, presenta el resultado de calcular el numero de signos vitales fuera de rango en cada instante de tiempo para el paciente 3.
 
-\begin{figure}[ht]
+Para facilitar la comparación, este número de signos vitales fuera de rango se clasifica nuevamente en tres categorías de riesgo: alto, medio y bajo. La clasificación se realiza de la siguiente manera: se considera alto riesgo cuando más de dos tercios de los signos vitales monitorizados en ese instante se encuentran fuera de los límites normales; riesgo medio si la proporción de signos vitales alterados está entre un tercio y dos tercios; y bajo riesgo cuando un tercio o menos de los signos vitales presentan valores fuera del rango normal para la edad del paciente. Este criterio es consistente con la metodología utilizada previamente para determinar el nivel de alerta a partir del indicador de criticidad, asegurando así coherencia en la evaluación.
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/patient3_signos_vitales_fuera_de_rango_2.png}
   \caption{Número de signos vitales fuera de rango para el paciente 3.}
   \label{fig:patient3_signos_vitales_fuera_de_rango}
 \end{figure}
-
-Para facilitar la comparación, este número de signos vitales fuera de rango se clasifica nuevamente en tres categorías de riesgo: alto, medio y bajo. La clasificación se realiza de la siguiente manera: se considera alto riesgo cuando más de dos tercios de los signos vitales monitorizados en ese instante se encuentran fuera de los límites normales; riesgo medio si la proporción de signos vitales alterados está entre un tercio y dos tercios; y bajo riesgo cuando un tercio o menos de los signos vitales presentan valores fuera del rango normal para la edad del paciente. Este criterio es consistente con la metodología utilizada previamente para determinar el nivel de alerta a partir del indicador de criticidad, asegurando así coherencia en la evaluación.
 
 A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la exactitud y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica.
 
@@ -25,11 +25,11 @@ Los resultados de la validación del modelo de detección de anomalías en subes
 
 \subsection{Resultados cuantitativos}
 
-En esta sección se presentan los resultados cuantitativos de la validación del modelo de detección de anomalías en subespacios. El objetivo principal es comparar la clasificación del estado de criticidad del paciente realizada por el indicador propuesto frente a la clasificación basada en el número de signos vitales fuera de rango, considerada como referencia objetiva. Esta comparación permite evaluar la capacidad del modelo para identificar correctamente los periodos de mayor riesgo fisiológico.
+En esta sección se presentan los resultados cuantitativos de la validación del modelo de detección de anomalías en subespacios. El objetivo principal es comparar la clasificación del estado de criticidad del paciente realizada por el indicador propuesto frente a la clasificación basada en el número de signos vitales fuera de rango, considerada como referencia objetiva. Esta comparación permite evaluar la capacidad del modelo para identificar correctamente los periodos de mayor riesgo fisiológico, y reportar alertas que sean coherentes con el estado real del paciente.
 
 Para ilustrar esta comparación, la Figura \ref{fig:comparacion_clasificacion_paciente3} muestra, para el paciente 3, la evolución temporal de cual es el nivel de alerta asignada por el indicador de criticidad y la categoría obtenida a partir del conteo de signos vitales fuera de rango. En el diagrama, cada instante de tiempo se clasifica como riesgo bajo, medio o alto según ambos métodos, permitiendo visualizar la concordancia y las discrepancias entre ellos.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/comparacion_indicador_con_fuera_de_rango.png}
   \caption{Comparación de la clasificación de criticidad para el paciente 3: indicador de criticidad vs. número de signos vitales fuera de rango.}
@@ -43,7 +43,7 @@ A continuación, la Tabla \ref{tab:resultados_cuantitativos} resume los resultad
 % Please add the following required packages to your document preamble:
 % \usepackage[table,xcdraw]{xcolor}
 % Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
-\begin{table}[ht]
+\begin{table}[H]
   \centering
   \resizebox{0.95\textwidth}{!}{%
     \begin{tabular}{
@@ -70,7 +70,7 @@ Estos hallazgos sugieren que el modelo es más efectivo en algunos pacientes que
 
 Para ilustrar este comportamiento y como esto puede resultar en peores resultados al aplicar esta metodología de validación, la Figura \ref{fig:indicador_tiempo_paciente3} muestra la evolución numérica del indicador de criticidad a lo largo del tiempo para el paciente 3. En este caso, se observa cómo el indicador permanece bajo y estable durante los periodos en los que no se detectan anomalías, reflejando correctamente que la condición fisiológica normal del paciente es de bajo riesgo.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/indicador_de_criticidad_cambio.png}
   \caption{Evolución temporal del indicador de criticidad para el paciente 3. Se observa que durante los periodos de baja variabilidad y sin anomalías, el indicador permanece bajo, reflejando un estado fisiológico normal.}
@@ -82,17 +82,17 @@ No obstante, esta suposición no es del todo correcta para pacientes que mantien
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{Images/comparacion_indicador_con_fuera_de_rango_paciente_7.png}
-  \caption{Comparación de la clasificación de criticidad para el paciente 7: indicador de criticidad vs. número de signos vitales fuera de rango. Se observa que el modelo subestima el riesgo al asumir baja variabilidad como bajo riesgo, a pesar de que todos los signos vitales están fuera de rango.}
+  \caption{Comparación de la clasificación de criticidad para el paciente 7: indicador de criticidad vs. número de signos vitales fuera de rango. Se observa que el modelo subestima el riesgo al asumir que una baja variabilidad implica un estado de bajo riesgo.}
   \label{fig:comparacion_clasificacion_paciente7}
 \end{figure}
 
 Estos resultados resaltan la importancia de considerar el contexto clinico del paciente al interpretar los datos de signos vitales y al aplicar el modelos de detección de anomalías con el objetivo de clasificar correctamente su estado de salud. En particular, es fundamental reconocer que la baja variabilidad en los signos vitales no siempre indica un estado de bajo riesgo, especialmente en pacientes con condiciones crónicas o inestables. Por lo tanto, se sugiere que futuras investigaciones consideren incorporar información clínica adicional y ajustar el modelo para mejorar su capacidad de adaptación a diferentes perfiles de pacientes.
 
-Para complementar el análisis cuantitativo, también se calcularon las métricas F1-Score y F2-Score, que proporcionan una medida más equilibrada entre precisión y exhaustividad. Estas métricas son especialmente útiles en contextos donde es importante minimizar tanto los falsos positivos como los falsos negativos. Los resultados de estas métricas se presentan en la última dos columnas de la Tabla \ref{tab:resultados_cuantitativos}, mostrando un rendimiento promedio del modelo en torno al 54\% para F1-Score y 55\% para F2-Score. Estos valores indican que, aunque el modelo logra una clasificación razonablemente precisa, aún existen oportunidades de mejora en su capacidad para identificar correctamente los periodos de mayor criticidad.
+Para complementar el análisis cuantitativo, también se calcularon las métricas F1-Score y F2-Score, que proporcionan una medida más equilibrada entre precisión y recall. Estas métricas son especialmente útiles en contextos donde es importante minimizar tanto los falsos positivos como los falsos negativos. Los resultados de estas métricas se presentan en la última dos columnas de la Tabla \ref{tab:resultados_cuantitativos}, mostrando un rendimiento promedio del modelo en torno al 54\% para F1-Score y 55\% para F2-Score. Estos valores indican que, aunque el modelo logra una clasificación razonablemente precisa, aún existen oportunidades de mejora en su capacidad para identificar correctamente los periodos de mayor criticidad.
 
 Adicionalmente, se realizó este mismo procedimiento de validación para el modelo de detección de anomalías anterior, el cual se basa en la identificación de patrones anómalos en el espacio completo de las señales fisiológicas. Los resultados obtenidos para este modelo se presentan en la Tabla \ref{tab:resultados_cuantitativos_anterior}, permitiendo una comparación directa con el modelo basado en subespacios para el mismo conjunto de pacientes.
 
-\begin{table}[ht]
+\begin{table}[H]
   \centering
   \resizebox{0.95\textwidth}{!}{%
     \begin{tabular}{

@@ -2,7 +2,7 @@
 
 El desarrollo de esta solución se basa en el trabajo previamente desarrollado por \textcite{Vargas2023}, quien propuso un modelo de tipo \textit{Hierarchical Temporal Memory }(HTM) para la detección de anomalías en los signos vitales de pacientes en Unidades de Cuidados Intensivos Pediátricos (UCIP). Dicho modelo permite analizar múltiples señales médicas de un paciente de forma conjunta, sin requerir una predefinición del número exacto de variables de entrada.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includesvg[width=\textwidth, inkscapelatex=false]{Images/ArquitecturaOriginal.svg}
   \captionsetup{justification=centering}
@@ -27,7 +27,7 @@ El conjunto de datos corresponde a pacientes pediátricos entre 8 y 15 años de 
 La Tabla~\ref{tab:pacientes} presenta el listado de los pacientes incluidos en el estudio, junto con su edad, diagnóstico médico y la cantidad de horas de monitoreo de signos vitales registradas para cada uno. En total de horas de monitoreo consideradas en el análisis asciende a 122,95 horas.
 
 \captionsetup{justification=centering} % Centra el caption de la tabla
-\begin{table}[ht]
+\begin{table}[H]
   \centering
   \begin{tabular}{
       >{\columncolor[HTML]{E8E8E8}}l
@@ -68,7 +68,7 @@ Por otro lado, vale la pena resaltar que estos datos recrean varios de los desaf
 
 A continuación, se presenta la tabulación de los signos vitales del paciente 3 a lo largo del tiempo, con el fin de ilustrar gráficamente la presencia de estos periodos de ausencia y la variabilidad en la presencia de ruido en las señales.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/SignosVitalesPaciente3.png}
   \caption{Evolución temporal de los signos vitales del paciente 3, mostrando periodos de ausencia y ruido en las señales.}

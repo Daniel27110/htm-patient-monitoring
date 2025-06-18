@@ -30,7 +30,7 @@ Comenzando por el \textit{Spatial Pooler}, este es responsable de transformar la
   \small
   \begin{tabular}{l c p{7cm}}
     \hline
-    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción sencilla} \\
+    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción} \\
     \hline
     columnDimensions & 2048 & Número de 'columnas', unidades que trabajan en paralelo para procesar la entrada. \\
     sp\_stimulusThreshold & 5 & Cuántas señales activas necesita una columna para activarse. \\
@@ -53,7 +53,7 @@ Como paso siguiente, el \textit{Temporal Memory} aprende secuencias temporales a
   \small
   \begin{tabular}{l c p{7cm}}
     \hline
-    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción sencilla} \\
+    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción} \\
     \hline
     tm\_cellsPerColumn & 16 & Cuántas 'células' hay en cada columna para entender el contexto. \\
     tm\_activationThreshold & 17 & Cuántas conexiones activas necesita una célula para activarse. \\
@@ -81,7 +81,7 @@ Finalmente, los parámetros específicos para la detección de anomalías determ
   \small
   \begin{tabular}{l c p{7cm}}
     \hline
-    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción sencilla} \\
+    \textbf{Parámetro} & \textbf{Valor} & \textbf{Descripción} \\
     \hline
     anom\_wait\_n & 120 & Cuántas muestras esperar antes de considerar una anomalía. \\
     anom\_window & 120 & Cuántas muestras usar para calcular la puntuación de anomalía. \\
@@ -100,7 +100,7 @@ Estos parámetros permiten que el modelo HTM procese eficazmente las señales fi
 
 La figura~\ref{fig:arquitectura_subespacios} ilustra el flujo de datos en la arquitectura propuesta para emplear modelos HTM en el análisis de señales médicas en subespacios. A continuación se describen con detalle las cuatro secciones que componen el flujo de datos:
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includesvg[width=\textwidth, inkscapelatex=false]{Images/ArquitecturaSubespacios.svg}
   \captionsetup{justification=centering}
@@ -194,8 +194,9 @@ En la Figura \ref{fig:patient2_dashboard_baja_alerta} se presenta la visualizaci
 
 En la parte derecha del tablero se encuentra la evolución temporal de los signos vitales seleccionados, presentada en un gráfico que permite al usuario ajustar fácilmente el periodo de tiempo visualizado. Esta funcionalidad es especialmente útil para analizar tendencias recientes o retrospectivas, apoyando la toma de decisiones informadas por parte del personal médico.
 
-\begin{figure}[ht] \centering \includegraphics[width=\textwidth]{Images/TableroControl2.png} \caption{Visualización del tablero de control para un instante intermedio del paciente 1 en estado de alerta baja.} \label{fig:patient2_dashboard_baja_alerta}
+\begin{figure}[H] \centering \includegraphics[width=\textwidth]{Images/TableroControl2.png} \caption{Visualización del tablero de control para un instante intermedio del paciente 1 en estado de alerta baja.} \label{fig:patient2_dashboard_baja_alerta}
 \end{figure}
 
-De esta manera, el tablero de control proporciona una visión integral y configurable del estado del paciente, resaltando tanto las combinaciones de signos vitales más relevantes para la alerta actual como la evolución de los parámetros fisiológicos a lo largo del tiempo.
+Vale la pena destacar que, en el tablero de control, la criticidad del paciente se presenta como un valor en una escala de 0 a 10, en lugar del rango original de 0 a 1 utilizado internamente por el sistema. Esta transformación se realiza simplemente multiplicando el índice de criticidad normalizado por 10. El motivo de esta decisión es facilitar la interpretación por parte del personal médico, ya que una escala de 0 a 10 resulta más intuitiva y familiar para la evaluación rápida de niveles de riesgo, permitiendo identificar de manera inmediata la gravedad del estado del paciente sin necesidad de realizar conversiones mentales adicionales.
 
+De esta manera, el tablero de control proporciona una visión integral y configurable del estado del paciente, resaltando tanto las combinaciones de signos vitales más relevantes para la alerta actual como la evolución de los parámetros fisiológicos a lo largo del tiempo.
