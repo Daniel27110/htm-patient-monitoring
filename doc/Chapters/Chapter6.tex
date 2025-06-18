@@ -36,13 +36,12 @@ Para ilustrar esta comparación, la Figura \ref{fig:comparacion_clasificacion_pa
   \label{fig:comparacion_clasificacion_paciente3}
 \end{figure}
 
-A partir de la comparación, se observa que el indicador de criticidad propuesto logra identificar correctamente los periodos de alto riesgo fisiológico en la mayoría de los casos, coincidiendo con los momentos en que más de dos tercios de los signos vitales se encuentran alterados. Además, el modelo muestra una buena capacidad para discriminar entre situaciones de riesgo medio y bajo, reflejando adecuadamente las fluctuaciones en el estado del paciente a lo largo del tiempo.
+A partir de esta comparación, se observa que el indicador de criticidad propuesto logra identificar correctamente los periodos de alto riesgo fisiológico en la mayoría de los casos, coincidiendo con los momentos donde la mayoría de los signos vitales se encuentran por fuera del rango normal. Además, el modelo muestra una buena capacidad para discriminar entre situaciones de riesgo medio y bajo, reflejando adecuadamente las fluctuaciones en el estado del paciente a lo largo del tiempo.
 
 A continuación, la Tabla \ref{tab:resultados_cuantitativos} resume los resultados cuantitativos obtenidos para todos los pacientes incluidos en la validación. Para cada paciente, se calcula la precisión del modelo, que se define como la proporción de instantes en los que el indicador de criticidad coincide con la categoría de riesgo asignada a partir del número de signos vitales fuera de rango. Además, nos interesa conocer la exactitud, que se define como la proporción de instantes en los que el modelo clasifica correctamente el estado del paciente como alto, medio o bajo riesgo.
 
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+Cabe destacar que para el cálculo de las métricas cuantitativas presentadas se empleó la librería \textit{sklearn.metrics} de Python. En este proceso, se construyó un arreglo que representa la categoría de riesgo (alto, medio o bajo) en cada instante de tiempo, definida a partir del número de signos vitales fuera del rango normal, el cual se considera como el valor de referencia o ``valor de verdad'' para la validación. Este arreglo se compara directamente con el arreglo de categorías de riesgo asignadas por el indicador de criticidad generado por el modelo propuesto. De esta manera, se obtienen las métricas de precisión y exactitud para cada paciente, permitiendo una evaluación objetiva del rendimiento del modelo.
+
 \begin{table}[H]
   \centering
   \resizebox{0.95\textwidth}{!}{%
@@ -66,7 +65,7 @@ A continuación, la Tabla \ref{tab:resultados_cuantitativos} resume los resultad
 
 Los resultados muestran que el modelo presenta una precisión promedio del 66\% y una exactitud del 58\%, lo que indica que, en general, el indicador de criticidad logra clasificar correctamente el estado del paciente en la mayoría de los casos. Sin embargo, se observan variaciones significativas entre los diferentes pacientes, con algunos casos como el Paciente 2 y el Paciente 3 alcanzando precisiones superiores al 90\%, mientras que otros como el Paciente 4 y el Paciente 7 presentan resultados más bajos.
 
-Estos hallazgos sugieren que el modelo es más efectivo en algunos pacientes que en otros, lo cual podría deberse a factores como la variabilidad individual en los signos vitales o la presencia de condiciones clínicas específicas que afectan la interpretación de los datos. Particularmente, estos resultados pueden estar relacionado con el funcionamiento del indicador de criticidad, ya que asume que aquellos instantes de baja variabilidad, donde no se presentan anomalías, corresponden a situaciones de bajo riesgo, puesto que el paciente se encuentra en su condición normal.
+Estos hallazgos sugieren que el modelo es más efectivo en algunos pacientes que en otros, lo cual podría deberse a factores como la variabilidad individual en los signos vitales o la presencia de condiciones clínicas específicas que afectan la interpretación de los datos. No obstante, al estudiar estos casos de forma más detallada, se puede observar que estos están siendo influenciados por la suposición de que una baja variabilidad en los signos vitales implica un estado de bajo riesgo. Esta suposición, aunque válida en muchos casos, no se aplica universalmente a todos los pacientes.
 
 Para ilustrar este comportamiento y como esto puede resultar en peores resultados al aplicar esta metodología de validación, la Figura \ref{fig:indicador_tiempo_paciente3} muestra la evolución numérica del indicador de criticidad a lo largo del tiempo para el paciente 3. En este caso, se observa cómo el indicador permanece bajo y estable durante los periodos en los que no se detectan anomalías, reflejando correctamente que la condición fisiológica normal del paciente es de bajo riesgo.
 
@@ -77,20 +76,21 @@ Para ilustrar este comportamiento y como esto puede resultar en peores resultado
   \label{fig:indicador_tiempo_paciente3}
 \end{figure}
 
-No obstante, esta suposición no es del todo correcta para pacientes que mantienen todos sus signos vitales consistentemente fuera del rango normal. De acuerdo al proceso de clasificación realizado, estos pacientes deberían clasificarse siempre en alto riesgo. Este es el caso del paciente 7, para el cual el modelo obtuvo un resultado pobre. La Figura \ref{fig:comparacion_clasificacion_paciente7} muestra la comparación entre el indicador de criticidad y la referencia objetiva para este paciente, evidenciando la discrepancia entre ambas clasificaciones. En este caso, el modelo subestima el riesgo al asumir que una baja variabilidad implica un estado de bajo riesgo, a pesar de que todos los signos vitales están fuera de rango.
+No obstante, esta suposición no es del todo correcta para pacientes que mantienen todos sus signos vitales consistentemente fuera del rango normal. De acuerdo al proceso de clasificación realizado, estos pacientes deberían clasificarse siempre en alto riesgo. Particularmente, ese es el caso del paciente 7, para el cual el modelo obtuvo un resultado pobre. La Figura \ref{fig:comparacion_clasificacion_paciente7} muestra la comparación entre el indicador de criticidad y la referencia objetiva para este paciente, evidenciando la discrepancia entre ambas clasificaciones. En este caso, el modelo subestima el riesgo al asumir que una baja variabilidad implica un estado de bajo riesgo, a pesar de que todos los signos vitales están fuera de rango.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/comparacion_indicador_con_fuera_de_rango_paciente_7.png}
-  \caption{Comparación de la clasificación de criticidad para el paciente 7: indicador de criticidad vs. número de signos vitales fuera de rango. Se observa que el modelo subestima el riesgo al asumir que una baja variabilidad implica un estado de bajo riesgo.}
+  \caption{Comparación de la clasificación de criticidad para el paciente 7: indicador de criticidad vs. número de signos vitales fuera de rango.}
+
   \label{fig:comparacion_clasificacion_paciente7}
 \end{figure}
 
 Estos resultados resaltan la importancia de considerar el contexto clinico del paciente al interpretar los datos de signos vitales y al aplicar el modelos de detección de anomalías con el objetivo de clasificar correctamente su estado de salud. En particular, es fundamental reconocer que la baja variabilidad en los signos vitales no siempre indica un estado de bajo riesgo, especialmente en pacientes con condiciones crónicas o inestables. Por lo tanto, se sugiere que futuras investigaciones consideren incorporar información clínica adicional y ajustar el modelo para mejorar su capacidad de adaptación a diferentes perfiles de pacientes.
 
-Para complementar el análisis cuantitativo, también se calcularon las métricas F1-Score y F2-Score, que proporcionan una medida más equilibrada entre precisión y recall. Estas métricas son especialmente útiles en contextos donde es importante minimizar tanto los falsos positivos como los falsos negativos. Los resultados de estas métricas se presentan en la última dos columnas de la Tabla \ref{tab:resultados_cuantitativos}, mostrando un rendimiento promedio del modelo en torno al 54\% para F1-Score y 55\% para F2-Score. Estos valores indican que, aunque el modelo logra una clasificación razonablemente precisa, aún existen oportunidades de mejora en su capacidad para identificar correctamente los periodos de mayor criticidad.
+Para complementar el análisis cuantitativo, también se calcularon las métricas F1-Score y F2-Score, que proporcionan una medida más equilibrada entre precisión y recall. Estas métricas son especialmente útiles en contextos donde es importante minimizar tanto los falsos positivos como los falsos negativos. Los resultados de estas métricas se presentan en la última dos columnas de la Tabla \ref{tab:resultados_cuantitativos}, mostrando un rendimiento promedio del modelo en torno al 54\% para F1-Score y 55\% para F2-Score. Estos valores indican que, aunque el modelo logra una clasificación razonablemente precisa, aún existen oportunidades de mejora en su capacidad para identificar correctamente los estados de criticidad del paciente.
 
-Adicionalmente, se realizó este mismo procedimiento de validación para el modelo de detección de anomalías anterior, el cual se basa en la identificación de patrones anómalos en el espacio completo de las señales fisiológicas. Los resultados obtenidos para este modelo se presentan en la Tabla \ref{tab:resultados_cuantitativos_anterior}, permitiendo una comparación directa con el modelo basado en subespacios para el mismo conjunto de pacientes.
+Adicionalmente, se realizó este mismo procedimiento de validación para el modelo de detección de anomalías anterior realizado por \cite{Vargas2023}, el cual se basa en la identificación de patrones anómalos en el espacio completo de las señales fisiológicas. Los resultados obtenidos para este modelo se presentan en la Tabla \ref{tab:resultados_cuantitativos_anterior}, permitiendo una comparación directa con el modelo basado en subespacios para el mismo conjunto de pacientes.
 
 \begin{table}[H]
   \centering
@@ -121,7 +121,7 @@ Los resultados cualitativos de la validación del modelo de detección de anomal
 
 Para ilustrar estas diferencias, la Figura \ref{fig:alertas_modelo_anterior_paciente5} presenta los signos vitales del paciente 5, junto con los puntos marcados con diamantes rojos que indican los momentos en los que el modelo anterior reporta alertas debido a la detección de un estado anómalo. En este caso, aunque se identifican los periodos críticos relevantes (ya que coinciden en su mayoría con momentos con un mayor numero de signos vitales por fuer del rango normal), no es posible determinar a partir de la alerta cuáles señales específicas influyeron en su generación. Esta falta de información dificulta que el personal médico pueda reaccionar de manera precisa y dirigida, ya que no se sabe con claridad qué parámetros fisiológicos requieren mayor atención o intervención.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/alertas_modelo_anterior_paciente5.png}
   \caption{Signos vitales del paciente 5 con alertas (diamantes rojos) generadas por el modelo anterior basado en el análisis del espacio completo. La alerta no indica qué señales específicas contribuyeron al estado anómalo.}
@@ -130,7 +130,7 @@ Para ilustrar estas diferencias, la Figura \ref{fig:alertas_modelo_anterior_paci
 
 En contraste, la Figura \ref{fig:alertas_subespacios_paciente5} muestra los signos vitales del mismo paciente, pero ahora resaltando las alertas generadas por el modelo de búsqueda en subespacios. En este diagrama, cada alerta está asociada explícitamente a una pareja de señales fisiológicas, correspondiente a aquella combinación que reporta mayor criticidad en ese instante. Esto permite identificar de manera clara cuáles parámetros están contribuyendo más significativamente al estado crítico del paciente. Gracias a esta información adicional, el personal médico puede comprender mejor el origen de la alerta y tomar decisiones más informadas y específicas sobre la intervención clínica necesaria.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/alertas_subespacios_paciente5.png}
   \caption{Signos vitales del paciente 5 con alertas generadas por el modelo de búsqueda en subespacios. Cada alerta está asociada a una pareja de señales, lo que facilita identificar el origen de la criticidad y orientar la respuesta clínica.}
@@ -141,7 +141,7 @@ Adicionalmente, el modelo propuesto permite evitar la generación de alertas poc
 
 Para validar este resultado entre todos los pacientes, se realizó un análisis respecto a la generación de falsas alertas, es decir, aquellas alertas que se generan cuando el paciente no presenta signos vitales fuera del rango normal. La Tabla \ref{tab:resultados_cualitativos} resume los resultados de este análisis para cada paciente, indicando el número total de alertas generadas por el modelo de subespacios y cuántas de ellas corresponden a situaciones donde todos los signos vitales están dentro del rango normal.
 
-\begin{table}[ht]
+\begin{table}[H]
   \centering
   \resizebox{0.95\textwidth}{!}{%
     \begin{tabular}{
@@ -166,3 +166,5 @@ Para validar este resultado entre todos los pacientes, se realizó un análisis 
 \end{table}
 
 Los resultados muestran que el modelo de subespacios genera significativamente menos falsas alertas en comparación con el modelo original. En total, se reportaron 1066 instantes con falsas alertas por parte del modelo de subespacios, mientras que el modelo original generó 1738 instantes de falsas alertas. Esto representa una reducción del 38,7\% en la cantidad de alertas innecesarias, lo cual es un resultado significativo considerando la importancia de minimizar la sobrecarga de alarmas en entornos clínicos.
+
+En general, los resultados cualitativos indican que el modelo de búsqueda en subespacios no solo mejora la precisión en la detección de anomalías, sino que también proporciona alertas más útiles y relevantes para el personal médico. Al asociar cada alerta a una pareja específica de señales fisiológicas, se facilita la identificación de patrones críticos y se optimiza la respuesta clínica, contribuyendo así a una atención más efectiva y centrada en el paciente. Por otra parte, la reducción de falsas alertas permite mejorar la confianza del personal médico en el sistema de monitoreo, al disminuir la cantidad de notificaciones irrelevantes que pueden generar distracción o fatiga ante alarmas.
