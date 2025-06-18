@@ -81,19 +81,19 @@ A partir de estos niveles de criticidad individuales, definimos la criticidad gl
   C(t) \;=\; \sum_{i \,\in\, \mathcal{A}(t)} \bigl(\delta_i \cdot c_i \bigr),
 \]
 
-donde $\mathcal{A}(t)$ es el conjunto de índices de subespacios activos en el instante $t$ (es decir, aquellos que han entregado un resultado válido y no presentan interrupciones en la lectura de los signos vitales). Sin embargo, puesto que puede ocurrir que algunos subespacios no entreguen respuesta en un instante dado, debido a desconexiones o interrupciones en la lectura de los signos vitales, es necesario normalizar esta suma entre el número de subespacios activos. De esta forma, el \emph{nivel de alerta} del paciente se computa como:
+donde $\mathcal{A}(t)$ es el conjunto de índices de subespacios activos en el instante $t$ (es decir, aquellos que han entregado un resultado válido y no presentan interrupciones en la lectura de los signos vitales). Sin embargo, puesto que puede ocurrir que algunos subespacios no entreguen respuesta en un instante dado, debido a desconexiones o interrupciones en la lectura de los signos vitales, es necesario normalizar esta suma entre el número de subespacios activos. De esta forma, el \emph{nivel de alerta} del paciente en el instante $t$ se define como:
 
 \[
   C(t)
   \;=\;
   \frac{
-    \displaystyle\sum_{i \,\in\, \mathcal{A}(t)} \bigl(\delta_i \cdot c_i \bigr)
+    1 + \displaystyle\sum_{i \,\in\, \mathcal{A}(t)} \bigl(\delta_i \cdot c_i \bigr)
   }{
     \bigl|\mathcal{A}(t)\bigr|
   }
 \]
 
-Supóngase que en un instante dado sólo se obtienen resultados de 3 de los 6 subespacios ($|\mathcal{A}(t)| = 3$). Si no se normalizara, la suma de los niveles de criticidad parciales tendería a subestimar la condición general del paciente debido a la ausencia de datos en los subespacios faltantes. Mediante la normalización entre $\mathcal{A}(t)$, se evita este sesgo, ya que el nivel de alerta se ajusta al número de subespacios activos en ese instante. Esto permite que el sistema mantenga una evaluación más precisa del estado del paciente, incluso cuando algunos signos vitales no están disponibles.
+Supóngase ahora que en un instante dado sólo se obtienen resultados de 3 de los 6 subespacios ($|\mathcal{A}(t)| = 3$). En este escenario, la suma de los niveles de criticidad parciales tendería a subestimar la condición general del paciente debido a la ausencia de datos en los subespacios faltantes. Por esta razón, mediante la normalización entre $\mathcal{A}(t)$, se evita este sesgo, ya que el nivel de alerta se ajusta al número de subespacios activos en ese instante. Esto permite que el sistema mantenga una evaluación más precisa del estado del paciente, incluso cuando algunos signos vitales no están disponibles.
 
 \bigskip
 
@@ -102,9 +102,18 @@ Supóngase que en un instante dado sólo se obtienen resultados de 3 de los 6 su
 En la última sección, el sistema presenta al personal médico un tablero de control que cumple las siguientes funciones:
 
 \begin{itemize}
-  \item \textbf{Monitoreo en Tiempo Real}: Muestra, mediante gráficos de series temporales, la evolución simultánea de los diferentes signos vitales y el índice de criticidad del paciente.
+  \item \textbf{Monitoreo de Signos Vitales}: Muestra, mediante gráficos de series temporales, la evolución simultánea de los diferentes signos vitales.
   \item \textbf{Criticidad del Paciente}: Visualiza de forma destacada el \emph{Nivel de criticidad Actual} junto con las parejas de señales responsables de dicha puntuación. Esto permite al personal médico identificar rápidamente qué combinaciones de signos vitales están contribuyendo al estado crítico del paciente.
   \item \textbf{Generación de Alertas}: Presenta alertas visuales cuando el nivel de criticidad supera un umbral predefinido, lo que indica que el paciente se encuentra en una situación de riesgo.
 \end{itemize}
 
-Dado que el índice de criticidad calculado por el sistema se encuentra normalizado en un rango entre 0 y 1, es posible establecer umbrales claros y objetivos para la generación de alertas clínicas. En particular, se propone definir tres niveles de alerta: bajo, medio y alto, en función del valor alcanzado por el indicador. Así, se considera que el paciente se encuentra en un estado de alerta baja cuando el índice de criticidad es inferior a 0.3; si el valor se sitúa entre 0.3 y 0.6, se clasifica como alerta media; y cuando el índice supera el umbral de 0.6, se activa una alerta alta, indicando una situación de riesgo significativo que requiere atención inmediata. Esta categorización facilita la interpretación rápida del estado del paciente por parte del personal médico y permite priorizar la respuesta clínica de acuerdo con la gravedad detectada por el sistema.
+Dado que el índice de criticidad calculado por el sistema se encuentra normalizado en un rango entre 0 y 1, es posible establecer umbrales claros y objetivos para la generación de alertas clínicas. En particular, se propone definir tres niveles de alerta: bajo, medio y alto, en función del valor alcanzado por el indicador de criticidad del paciente. Dicho esto, se considera que el paciente se encuentra en un estado de alerta de nivel bajo cuando el índice de criticidad es inferior a 0.3; si el valor se sitúa entre 0.3 y 0.6, se clasifica como alerta de nivel medio; y cuando el índice supera el umbral de 0.6, se clasifica como una alert de nivel alto, indicando una situación de riesgo significativo que requiere atención inmediata. Esta categorización facilita la interpretación rápida del estado del paciente por parte del personal médico y permite priorizar la respuesta clínica de acuerdo con la gravedad detectada por el sistema.
+
+En la Figura \ref{fig:patient2_dashboard_baja_alerta} se presenta la visualización del tablero de control correspondiente al paciente 2 en un momento en el que el sistema considera que el nivel de alerta es bajo. En la parte izquierda del diagrama se observa claramente qué pareja de signos vitales está participando en la generación de la alerta; por ejemplo, la combinación de frecuencia cardíaca y frecuencia respiratoria muestra una criticidad moderada y mayor influencia en la criticidad del paciente, mientras que la pareja de frecuencia cardíaca y saturación de oxigeno presenta una criticidad baja. Esta visualización permite identificar de manera intuitiva no solo qué signos vitales están involucrados en la generación de cada alerta, sino también la severidad asociada a cada combinación, facilitando la priorización de la atención clínica.
+
+En la parte derecha del tablero se encuentra la evolución temporal de los signos vitales seleccionados, presentada en un gráfico que permite al usuario ajustar fácilmente el periodo de tiempo visualizado. Esta funcionalidad es especialmente útil para analizar tendencias recientes o retrospectivas, apoyando la toma de decisiones informadas por parte del personal médico.
+
+\begin{figure}[ht] \centering \includegraphics[width=\textwidth]{Images/TableroControl.png} \caption{Visualización del tablero de control para el paciente 2 en estado de alerta baja.} \label{fig:patient2_dashboard_baja_alerta}
+\end{figure}
+
+De esta manera, el tablero de control proporciona una visión integral y configurable del estado del paciente, resaltando tanto las combinaciones de signos vitales más relevantes para la alerta actual como la evolución de los parámetros fisiológicos a lo largo del tiempo.
