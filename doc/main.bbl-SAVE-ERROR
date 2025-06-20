@@ -1,0 +1,1953 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/apasortcite//global/global/global}
+    \entry{Adegboro2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=5a086a26d1579fb9f895a462cc2ca203}{%
+           family={Adegboro},
+           familyi={A\bibinitperiod},
+           given={Claudette\bibnamedelima O.},
+           giveni={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0dfef89351553c6508e561abf79beba}{%
+           family={Choudhury},
+           familyi={C\bibinitperiod},
+           given={Avishek},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c86254195a5e695003780560344fb82}{%
+           family={Asan},
+           familyi={A\bibinitperiod},
+           given={Onur},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a59dee63a3ba0d8eaf91c3257e0e4e29}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Michelle\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Academy of Pediatrics}%
+      }
+      \strng{namehash}{7722571e75b42529f7cfec48c6ff58b5}
+      \strng{fullhash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{fullhashraw}{02d28cf22c6f8d94c657109e24647850}
+      \strng{bibnamehash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{authorbibnamehash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{authornamehash}{7722571e75b42529f7cfec48c6ff58b5}
+      \strng{authorfullhash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{authorfullhashraw}{02d28cf22c6f8d94c657109e24647850}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hospital Pediatrics}
+      \field{number}{1}
+      \field{title}{Artificial Intelligence to Improve Health Outcomes in the NICU and PICU: A Systematic Review}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{pages}{93\bibrangedash 110}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1542/hpeds.2021-006094
+      \endverb
+    \endentry
+    \entry{AHMAD2017134}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a01da48611238f2d1508928a8b87f5bf}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Subutai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf72098cd45f5c1bf15686baa9bed3e8}{%
+           family={Lavin},
+           familyi={L\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a80069476b75650d955e49499a14b15}{%
+           family={Purdy},
+           familyi={P\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50c8e36504f40020d2eae37c3c15c731}{%
+           family={Agha},
+           familyi={A\bibinitperiod},
+           given={Zuha},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7023c6df4c8d8e69cc8ab234377f7e0b}
+      \strng{fullhash}{591617942bb61554babb011903e716df}
+      \strng{fullhashraw}{591617942bb61554babb011903e716df}
+      \strng{bibnamehash}{591617942bb61554babb011903e716df}
+      \strng{authorbibnamehash}{591617942bb61554babb011903e716df}
+      \strng{authornamehash}{7023c6df4c8d8e69cc8ab234377f7e0b}
+      \strng{authorfullhash}{591617942bb61554babb011903e716df}
+      \strng{authorfullhashraw}{591617942bb61554babb011903e716df}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomputing}
+      \field{note}{Online Real-Time Learning Strategies for Data Streams}
+      \field{title}{Unsupervised real-time anomaly detection for streaming data}
+      \field{volume}{262}
+      \field{year}{2017}
+      \field{pages}{134\bibrangedash 147}
+      \range{pages}{14}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.neucom.2017.04.070
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231217309864
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231217309864
+      \endverb
+      \keyw{Anomaly detection,Hierarchical Temporal Memory,Streaming data,Unsupervised learning,Concept drift,Benchmark dataset}
+    \endentry
+    \entry{Aiken2002}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=bb6b87fcf9993c3309bc1c4004a419a4}{%
+           family={Aiken},
+           familyi={A\bibinitperiod},
+           given={Linda\bibnamedelima H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35e515739e115db519ea4698f4df23bd}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Sean\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2945c215260f44bf8b88b9763dc9de26}{%
+           family={Sloane},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5842e627a34788b36c1fdc092f4dc42c}{%
+           family={Sochalski},
+           familyi={S\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0396328b7553a92905a436f8c1606224}{%
+           family={Silber},
+           familyi={S\bibinitperiod},
+           given={Jeffrey\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Medical Association (AMA)}%
+      }
+      \strng{namehash}{216d0ff0e5f4325164f4d5a03b16eb5c}
+      \strng{fullhash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{fullhashraw}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{bibnamehash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{authorbibnamehash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{authornamehash}{216d0ff0e5f4325164f4d5a03b16eb5c}
+      \strng{authorfullhash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{authorfullhashraw}{d9337130e986ae2b41aaf54060c6bab9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0098-7484}
+      \field{journaltitle}{JAMA}
+      \field{month}{10}
+      \field{number}{16}
+      \field{title}{Hospital Nurse Staffing and Patient Mortality, Nurse Burnout, and Job Dissatisfaction}
+      \field{volume}{288}
+      \field{year}{2002}
+      \field{pages}{1987}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1001/jama.288.16.1987
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.288.16.1987
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.288.16.1987
+      \endverb
+    \endentry
+    \entry{Arango2015}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7cb6c1d8d5847b18c3e6312f8944e105}{%
+           family={Arango},
+           familyi={A\bibinitperiod},
+           given={Gloria\bibnamedelima Lucía},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d7c1a2feceaa3b79320a0e695b59994}{%
+           family={Peña},
+           familyi={P\bibinitperiod},
+           given={Beatriz},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3c41a71f4bf02f014c4dc0c243802aa}{%
+           family={Vega},
+           familyi={V\bibinitperiod},
+           given={Yolanda},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad de la Sabana}%
+      }
+      \strng{namehash}{7d298d7aa25f9c8371d53b7a5601995a}
+      \strng{fullhash}{a2088fbba5c53e465542df401e014515}
+      \strng{fullhashraw}{a2088fbba5c53e465542df401e014515}
+      \strng{bibnamehash}{a2088fbba5c53e465542df401e014515}
+      \strng{authorbibnamehash}{a2088fbba5c53e465542df401e014515}
+      \strng{authornamehash}{7d298d7aa25f9c8371d53b7a5601995a}
+      \strng{authorfullhash}{a2088fbba5c53e465542df401e014515}
+      \strng{authorfullhashraw}{a2088fbba5c53e465542df401e014515}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2027-5374}
+      \field{journaltitle}{Aquichan}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Relación de la asignación de personal de enfermería con indicadores de resultado de la calidad de la atención en unidades de cuidados intensivos adulto}
+      \field{volume}{15}
+      \field{year}{2015}
+      \field{pages}{90\bibrangedash 104}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.5294/aqui.2015.15.1.9
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.5294/aqui.2015.15.1.9
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.5294/aqui.2015.15.1.9
+      \endverb
+    \endentry
+    \entry{Areia2021}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=c23fcc0e4f6002d66516c37aa82593a2}{%
+           family={Areia},
+           familyi={A\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3918e10ca01f84b99d8d82d76659f75}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Elifzabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbdc8a3b6281f3349980162904382f0a}{%
+           family={Ede},
+           familyi={E\bibinitperiod},
+           given={Jody},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b0360cc1221ed4e039061c45ac32f82}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Louise},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6760feb08252e60c76cae9442660acca}{%
+           family={Tarassenko},
+           familyi={T\bibinitperiod},
+           given={Lionel},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3e2bfa0c51634a608ce7a43de4cdc36}{%
+           family={Watkinson},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04d02a0de84e9833005163fe4056341c}{%
+           family={Vollam},
+           familyi={V\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{5a22cc3911dc92a6e4227a9508abfb07}
+      \strng{fullhash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{fullhashraw}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{bibnamehash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{authorbibnamehash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{authornamehash}{5a22cc3911dc92a6e4227a9508abfb07}
+      \strng{authorfullhash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{authorfullhashraw}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1365-2648}
+      \field{journaltitle}{Journal of Advanced Nursing}
+      \field{month}{10}
+      \field{number}{3}
+      \field{title}{Experiences of current vital signs monitoring practices and views of wearable monitoring: A qualitative study in patients and nurses}
+      \field{volume}{78}
+      \field{year}{2021}
+      \field{pages}{810\bibrangedash 822}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1111/jan.15055
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1111/jan.15055
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1111/jan.15055
+      \endverb
+    \endentry
+    \entry{Ariste2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f2e26e8eaf476f482de75d05c24add0a}{%
+           family={Ariste},
+           familyi={A\bibinitperiod},
+           given={Ruolz},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9ec2a9b17120386eaa55559019a72ba}{%
+           family={Béjaoui},
+           familyi={B\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4279dd9cf989d5bd38b7ae9770327adc}{%
+           family={Dauphin},
+           familyi={D\bibinitperiod},
+           given={Anyck},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley & Sons, Ltd.}%
+      }
+      \strng{namehash}{c97eda426d9393b8a2d35af07fb3b9ed}
+      \strng{fullhash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{fullhashraw}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{bibnamehash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{authorbibnamehash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{authornamehash}{c97eda426d9393b8a2d35af07fb3b9ed}
+      \strng{authorfullhash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{authorfullhashraw}{e67560d3fbd506fb2e14f8233674c163}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1099-1751}
+      \field{journaltitle}{The International Journal of Health Planning and Management}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{Critical analysis of nurses' labour market effectiveness in Canada: The hidden aspects of the shortage}
+      \field{volume}{34}
+      \field{year}{2019}
+      \field{pages}{1144\bibrangedash 1154}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/hpm.2772
+      \endverb
+      \verb{eprint}
+      \verb https://pubmed.ncbi.nlm.nih.gov/30945352/
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/hpm.2772
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/hpm.2772
+      \endverb
+    \endentry
+    \entry{Davenport2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f7f48ae3aa9f7699a29a2d4306a52421}{%
+           family={Davenport},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=42bb1b0e40a6926c8ef47198451d1fcb}{%
+           family={Kalakota},
+           familyi={K\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{fullhash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{fullhashraw}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{bibnamehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authorbibnamehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authornamehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authorfullhash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authorfullhashraw}{79c8feaea2760c38932efe52a245c7b6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2514-6645}
+      \field{journaltitle}{Future Healthcare Journal}
+      \field{number}{2}
+      \field{title}{The potential for artificial intelligence in healthcare}
+      \field{volume}{6}
+      \field{year}{2019}
+      \field{pages}{94\bibrangedash 98}
+      \range{pages}{5}
+      \verb{doi}
+      \verb https://doi.org/10.7861/futurehosp.6-2-94
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2514664524010592
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2514664524010592
+      \endverb
+      \keyw{Artificial intelligence,clinical decision support,electronic health record systems}
+    \endentry
+    \entry{Depasse1998}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9f80e473ef89e8694fed5141d0fb2034}{%
+           family={Depasse},
+           familyi={D\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f9b4c539b9d66629cdb916ef4ef5292}{%
+           family={Pauwels},
+           familyi={P\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0164a7cf5ca2366cf48ae99a20ebe564}{%
+           family={Somers},
+           familyi={S\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=367146bedad4d029bb8be1c6a1e323fd}{%
+           family={Vincent},
+           familyi={V\bibinitperiod},
+           given={J.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cea06baec390919d5810a4c5041a1969}
+      \strng{fullhash}{d62380446d96428c18eb1abc01337b94}
+      \strng{fullhashraw}{d62380446d96428c18eb1abc01337b94}
+      \strng{bibnamehash}{d62380446d96428c18eb1abc01337b94}
+      \strng{authorbibnamehash}{d62380446d96428c18eb1abc01337b94}
+      \strng{authornamehash}{cea06baec390919d5810a4c5041a1969}
+      \strng{authorfullhash}{d62380446d96428c18eb1abc01337b94}
+      \strng{authorfullhashraw}{d62380446d96428c18eb1abc01337b94}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0342-4642}
+      \field{journaltitle}{Intensive Care Medicine}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{A profile of European ICU nursing}
+      \field{volume}{24}
+      \field{year}{1998}
+      \field{pages}{939\bibrangedash 945}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/s001340050693
+      \endverb
+    \endentry
+    \entry{Karalis2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=63f1d44a7206e7e736f033a3ebf48a77}{%
+           family={Karalis},
+           familyi={K\bibinitperiod},
+           given={Vangelis\bibnamedelima D.},
+           giveni={V\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{fullhash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{fullhashraw}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{bibnamehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authorbibnamehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authornamehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authorfullhash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authorfullhashraw}{63f1d44a7206e7e736f033a3ebf48a77}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2813-0464}
+      \field{journaltitle}{Applied Biosciences}
+      \field{number}{1}
+      \field{title}{The Integration of Artificial Intelligence into Clinical Practice}
+      \field{volume}{3}
+      \field{year}{2024}
+      \field{pages}{14\bibrangedash 44}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.3390/applbiosci3010002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2813-0464/3/1/2
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2813-0464/3/1/2
+      \endverb
+    \endentry
+    \entry{Leyton2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=702359c40a4fd41e85ea8e1aff4f6859}{%
+           family={Lazo},
+           familyi={L\bibinitperiod},
+           given={Wilfredo\bibnamedelima Leyton},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6060a3d919bd62e17ef5736f78459952}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Clara\bibnamedelima López},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Osorno, Chile}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Universidad de Los Lagos}%
+      }
+      \strng{namehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{fullhash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{fullhashraw}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{bibnamehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authorbibnamehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authornamehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authorfullhash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authorfullhashraw}{58a5f13531221beeca44c2a1a4470c56}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-956-6043-18-8}
+      \field{title}{Manual de signos vitales en la población pediátrica}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.32735/978-956-6043-18-8/2020
+      \endverb
+      \verb{urlraw}
+      \verb https://editorial.ulagos.cl/wp-content/uploads/2021/04/Manual-de-signos-vitales-en-la-poblacion-pediatrica.pdf
+      \endverb
+      \verb{url}
+      \verb https://editorial.ulagos.cl/wp-content/uploads/2021/04/Manual-de-signos-vitales-en-la-poblacion-pediatrica.pdf
+      \endverb
+    \endentry
+    \entry{Varnosfaderani2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b17b8b86c7b5117afcce89b9240d4ebd}{%
+           family={Maleki\bibnamedelima Varnosfaderani},
+           familyi={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Shiva},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f972354ef8b1760eeb8bcd0a8c19b8}{%
+           family={Forouzanfar},
+           familyi={F\bibinitperiod},
+           given={Mohamad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{fullhash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{fullhashraw}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{bibnamehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authorbibnamehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authornamehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authorfullhash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authorfullhashraw}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2306-5354}
+      \field{journaltitle}{Bioengineering}
+      \field{month}{3}
+      \field{number}{4}
+      \field{title}{The Role of AI in Hospitals and Clinics: Transforming Healthcare in the 21st Century}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{337}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/bioengineering11040337
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.3390/bioengineering11040337
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.3390/bioengineering11040337
+      \endverb
+    \endentry
+    \entry{MinistryHealth2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=10ae01772ad698a66bed4068548f4b6e}{%
+           family={{Ministerio de Salud de la provincia de Columbia}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{fullhash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{fullhashraw}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{bibnamehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authorbibnamehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authornamehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authorfullhash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authorfullhashraw}{10ae01772ad698a66bed4068548f4b6e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Ratio Definitions for Hospital Sector - Province of British Columbia}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/mnpr/mnpr-ratio-definitions
+      \endverb
+      \verb{url}
+      \verb https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/mnpr/mnpr-ratio-definitions
+      \endverb
+    \endentry
+    \entry{oecd2024society}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bdbed435a416a918aa494017fda4c7fb}{%
+           family={{OECD}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris}%
+      }
+      \strng{namehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{bibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorbibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authornamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Society at a Glance 2024: OECD Social Indicators}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1787/918d8db3-en
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1787/918d8db3-en
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1787/918d8db3-en
+      \endverb
+    \endentry
+    \entry{htmcore2019}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e7ae89bab88c0e410abcbd0cd1706cbc}{%
+           family={Otahal},
+           familyi={O\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04df70c608794252329af37b33f3bc45}{%
+           family={Keeney},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b21d058fa414ed3b54a932ff1fc18a5}{%
+           family={McDougall},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Github}%
+      }
+      \strng{namehash}{8a2ccda2ffe3f1d2f115c02d9b19bb35}
+      \strng{fullhash}{7bfbafa312467458c75785126af49fa6}
+      \strng{fullhashraw}{7bfbafa312467458c75785126af49fa6}
+      \strng{bibnamehash}{7bfbafa312467458c75785126af49fa6}
+      \strng{authorbibnamehash}{7bfbafa312467458c75785126af49fa6}
+      \strng{authornamehash}{8a2ccda2ffe3f1d2f115c02d9b19bb35}
+      \strng{authorfullhash}{7bfbafa312467458c75785126af49fa6}
+      \strng{authorfullhashraw}{7bfbafa312467458c75785126af49fa6}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Implementation of cortical algorithms based on HTM theory in C++ \& Python. Research \& development library.}
+      \field{howpublished}{\url{https://github.com/htm-community/htm.core/}}
+      \field{journaltitle}{Github repository}
+      \field{series}{{Community edition}}
+      \field{title}{{HTM.core implementation of Hierarchical Temporal Memory}}
+      \field{year}{2019}
+      \keyw{HTM; Hierarchical Temporal Memory; NuPIC; Numenta; cortical algorithm; sparse distributed representation; anomaly; prediction; bioinspired; neuromorphic}
+    \endentry
+    \entry{Pieroni2023}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8ffbbcb272bb0e587f6756bf919bfe01}{%
+           family={Pieroni},
+           familyi={P\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=16202dba54e210124606dddba74d56ad}{%
+           family={Oiler},
+           familyi={O\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e2e612aea9c9fcf10e7df3a39990c77a}{%
+           family={Ortega-Martorell},
+           familyi={O\bibinithyphendelim M\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=250e83f7b6bafafaa7320345847f281a}{%
+           family={Lip},
+           familyi={L\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=db36c764e20fa6a5beac28447096dfcc}{%
+           family={Welters},
+           familyi={W\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Liverpool John Moores University}%
+      }
+      \strng{namehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{fullhash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{fullhashraw}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{bibnamehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authorbibnamehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authornamehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authorfullhash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authorfullhashraw}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{editorbibnamehash}{7315a453ccb04111835a192fcf2f5c01}
+      \strng{editornamehash}{784f04c4709932ed23e911d8874f812c}
+      \strng{editorfullhash}{7315a453ccb04111835a192fcf2f5c01}
+      \strng{editorfullhashraw}{7315a453ccb04111835a192fcf2f5c01}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Machine Learning Modelling of Critical Care Patients in the Intensive Care Units}
+      \field{type}{phdthesis}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.24377/LJMU.t.00019587
+      \endverb
+      \verb{urlraw}
+      \verb https://researchonline.ljmu.ac.uk/id/eprint/19587/
+      \endverb
+      \verb{url}
+      \verb https://researchonline.ljmu.ac.uk/id/eprint/19587/
+      \endverb
+      \keyw{Machine Learning; AI; ICU; Sepsis; Cardiovascular; Atrial Fibrillation; Critical Care; Intensive Care}
+    \endentry
+    \entry{Rush2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cb6ddc38ac4934a5d3568dea8eb8880e}{%
+           family={Rush},
+           familyi={R\bibinitperiod},
+           given={Barret},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0e3dac1adc983d78b53e594ecb6d1dc}{%
+           family={Celi},
+           familyi={C\bibinitperiod},
+           given={Leo\bibnamedelima Anthony},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ff4ab1d379832d3edee28194fb4e7b2}{%
+           family={Stone},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{d909dadcb0c62afd30c0999b18ae1a15}
+      \strng{fullhash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{fullhashraw}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{bibnamehash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{authorbibnamehash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{authornamehash}{d909dadcb0c62afd30c0999b18ae1a15}
+      \strng{authorfullhash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{authorfullhashraw}{71b52ac7a99122f805ed80ea71eb3410}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-2614}
+      \field{journaltitle}{Journal of Clinical Monitoring and Computing}
+      \field{month}{11}
+      \field{number}{5}
+      \field{title}{Applying machine learning to continuously monitored physiological data}
+      \field{volume}{33}
+      \field{year}{2018}
+      \field{pages}{887\bibrangedash 893}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/s10877-018-0219-z
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s10877-018-0219-z
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s10877-018-0219-z
+      \endverb
+    \endentry
+    \entry{Vargas2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eee8d7f9abbe8849d9f3c16e6f947fc8}{%
+           family={Vargas},
+           familyi={V\bibinitperiod},
+           given={Guido\bibnamedelima Enrique},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{fullhash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{fullhashraw}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{bibnamehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authorbibnamehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authornamehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authorfullhash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authorfullhashraw}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://hdl.handle.net/1992/68734}}
+      \field{title}{{MAD-VitalS: Solución de inteligencia artificial para el monitoreo y detección de anomalías en signos vitales de pacientes en UCIP en tiempo real}}
+      \field{year}{2023}
+    \endentry
+    \entry{zhang2023interpretable}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=17a0288dfc434ca54a825120c46148d6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={T-Y},
+           giveni={T\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=933efa88cdd3918ff5244918e6b0cf08}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d9d1f0d938c2cbfb899083d3cbe3b5c1}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Y-Z},
+           giveni={Y\bibinithyphendelim Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=371885733f35cc5137437d865409a201}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={M-W},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Eur Rev Med Pharmacol Sci}%
+      }
+      \strng{namehash}{f4996d168f20aea3d197268a8b44cf65}
+      \strng{fullhash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{fullhashraw}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{bibnamehash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{authorbibnamehash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{authornamehash}{f4996d168f20aea3d197268a8b44cf65}
+      \strng{authorfullhash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{authorfullhashraw}{38ba3c36f462c18d4123f53ea023a21e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2284-0729}
+      \field{journaltitle}{European Review for Medical and Pharmacological Sciences}
+      \field{number}{10}
+      \field{title}{An interpretable machine learning model for real-time sepsis prediction based on basic physiological indicators}
+      \field{volume}{27}
+      \field{year}{2023}
+      \field{pages}{4348\bibrangedash 4356}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.26355/eurrev_202305_32439
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Adegboro2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=5a086a26d1579fb9f895a462cc2ca203}{%
+           family={Adegboro},
+           familyi={A\bibinitperiod},
+           given={Claudette\bibnamedelima O.},
+           giveni={C\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0dfef89351553c6508e561abf79beba}{%
+           family={Choudhury},
+           familyi={C\bibinitperiod},
+           given={Avishek},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c86254195a5e695003780560344fb82}{%
+           family={Asan},
+           familyi={A\bibinitperiod},
+           given={Onur},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a59dee63a3ba0d8eaf91c3257e0e4e29}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Michelle\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Academy of Pediatrics}%
+      }
+      \strng{namehash}{7722571e75b42529f7cfec48c6ff58b5}
+      \strng{fullhash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{fullhashraw}{02d28cf22c6f8d94c657109e24647850}
+      \strng{bibnamehash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{authorbibnamehash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{authornamehash}{7722571e75b42529f7cfec48c6ff58b5}
+      \strng{authorfullhash}{02d28cf22c6f8d94c657109e24647850}
+      \strng{authorfullhashraw}{02d28cf22c6f8d94c657109e24647850}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hospital Pediatrics}
+      \field{number}{1}
+      \field{title}{Artificial Intelligence to Improve Health Outcomes in the NICU and PICU: A Systematic Review}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{pages}{93\bibrangedash 110}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1542/hpeds.2021-006094
+      \endverb
+    \endentry
+    \entry{AHMAD2017134}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a01da48611238f2d1508928a8b87f5bf}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Subutai},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf72098cd45f5c1bf15686baa9bed3e8}{%
+           family={Lavin},
+           familyi={L\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a80069476b75650d955e49499a14b15}{%
+           family={Purdy},
+           familyi={P\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50c8e36504f40020d2eae37c3c15c731}{%
+           family={Agha},
+           familyi={A\bibinitperiod},
+           given={Zuha},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7023c6df4c8d8e69cc8ab234377f7e0b}
+      \strng{fullhash}{591617942bb61554babb011903e716df}
+      \strng{fullhashraw}{591617942bb61554babb011903e716df}
+      \strng{bibnamehash}{591617942bb61554babb011903e716df}
+      \strng{authorbibnamehash}{591617942bb61554babb011903e716df}
+      \strng{authornamehash}{7023c6df4c8d8e69cc8ab234377f7e0b}
+      \strng{authorfullhash}{591617942bb61554babb011903e716df}
+      \strng{authorfullhashraw}{591617942bb61554babb011903e716df}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomputing}
+      \field{note}{Online Real-Time Learning Strategies for Data Streams}
+      \field{title}{Unsupervised real-time anomaly detection for streaming data}
+      \field{volume}{262}
+      \field{year}{2017}
+      \field{pages}{134\bibrangedash 147}
+      \range{pages}{14}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.neucom.2017.04.070
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231217309864
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925231217309864
+      \endverb
+      \keyw{Anomaly detection,Hierarchical Temporal Memory,Streaming data,Unsupervised learning,Concept drift,Benchmark dataset}
+    \endentry
+    \entry{Aiken2002}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=bb6b87fcf9993c3309bc1c4004a419a4}{%
+           family={Aiken},
+           familyi={A\bibinitperiod},
+           given={Linda\bibnamedelima H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=35e515739e115db519ea4698f4df23bd}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Sean\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2945c215260f44bf8b88b9763dc9de26}{%
+           family={Sloane},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5842e627a34788b36c1fdc092f4dc42c}{%
+           family={Sochalski},
+           familyi={S\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0396328b7553a92905a436f8c1606224}{%
+           family={Silber},
+           familyi={S\bibinitperiod},
+           given={Jeffrey\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Medical Association (AMA)}%
+      }
+      \strng{namehash}{216d0ff0e5f4325164f4d5a03b16eb5c}
+      \strng{fullhash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{fullhashraw}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{bibnamehash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{authorbibnamehash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{authornamehash}{216d0ff0e5f4325164f4d5a03b16eb5c}
+      \strng{authorfullhash}{d9337130e986ae2b41aaf54060c6bab9}
+      \strng{authorfullhashraw}{d9337130e986ae2b41aaf54060c6bab9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0098-7484}
+      \field{journaltitle}{JAMA}
+      \field{month}{10}
+      \field{number}{16}
+      \field{title}{Hospital Nurse Staffing and Patient Mortality, Nurse Burnout, and Job Dissatisfaction}
+      \field{volume}{288}
+      \field{year}{2002}
+      \field{pages}{1987}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1001/jama.288.16.1987
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1001/jama.288.16.1987
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1001/jama.288.16.1987
+      \endverb
+    \endentry
+    \entry{Arango2015}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7cb6c1d8d5847b18c3e6312f8944e105}{%
+           family={Arango},
+           familyi={A\bibinitperiod},
+           given={Gloria\bibnamedelima Lucía},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d7c1a2feceaa3b79320a0e695b59994}{%
+           family={Peña},
+           familyi={P\bibinitperiod},
+           given={Beatriz},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3c41a71f4bf02f014c4dc0c243802aa}{%
+           family={Vega},
+           familyi={V\bibinitperiod},
+           given={Yolanda},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad de la Sabana}%
+      }
+      \strng{namehash}{7d298d7aa25f9c8371d53b7a5601995a}
+      \strng{fullhash}{a2088fbba5c53e465542df401e014515}
+      \strng{fullhashraw}{a2088fbba5c53e465542df401e014515}
+      \strng{bibnamehash}{a2088fbba5c53e465542df401e014515}
+      \strng{authorbibnamehash}{a2088fbba5c53e465542df401e014515}
+      \strng{authornamehash}{7d298d7aa25f9c8371d53b7a5601995a}
+      \strng{authorfullhash}{a2088fbba5c53e465542df401e014515}
+      \strng{authorfullhashraw}{a2088fbba5c53e465542df401e014515}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2027-5374}
+      \field{journaltitle}{Aquichan}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Relación de la asignación de personal de enfermería con indicadores de resultado de la calidad de la atención en unidades de cuidados intensivos adulto}
+      \field{volume}{15}
+      \field{year}{2015}
+      \field{pages}{90\bibrangedash 104}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.5294/aqui.2015.15.1.9
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.5294/aqui.2015.15.1.9
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.5294/aqui.2015.15.1.9
+      \endverb
+    \endentry
+    \entry{Areia2021}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=c23fcc0e4f6002d66516c37aa82593a2}{%
+           family={Areia},
+           familyi={A\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3918e10ca01f84b99d8d82d76659f75}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Elifzabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbdc8a3b6281f3349980162904382f0a}{%
+           family={Ede},
+           familyi={E\bibinitperiod},
+           given={Jody},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b0360cc1221ed4e039061c45ac32f82}{%
+           family={Young},
+           familyi={Y\bibinitperiod},
+           given={Louise},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6760feb08252e60c76cae9442660acca}{%
+           family={Tarassenko},
+           familyi={T\bibinitperiod},
+           given={Lionel},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3e2bfa0c51634a608ce7a43de4cdc36}{%
+           family={Watkinson},
+           familyi={W\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04d02a0de84e9833005163fe4056341c}{%
+           family={Vollam},
+           familyi={V\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{5a22cc3911dc92a6e4227a9508abfb07}
+      \strng{fullhash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{fullhashraw}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{bibnamehash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{authorbibnamehash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{authornamehash}{5a22cc3911dc92a6e4227a9508abfb07}
+      \strng{authorfullhash}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \strng{authorfullhashraw}{09b4ad5dbc345ca430f2712ad2a4f6c2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1365-2648}
+      \field{journaltitle}{Journal of Advanced Nursing}
+      \field{month}{10}
+      \field{number}{3}
+      \field{title}{Experiences of current vital signs monitoring practices and views of wearable monitoring: A qualitative study in patients and nurses}
+      \field{volume}{78}
+      \field{year}{2021}
+      \field{pages}{810\bibrangedash 822}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1111/jan.15055
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1111/jan.15055
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1111/jan.15055
+      \endverb
+    \endentry
+    \entry{Ariste2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f2e26e8eaf476f482de75d05c24add0a}{%
+           family={Ariste},
+           familyi={A\bibinitperiod},
+           given={Ruolz},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9ec2a9b17120386eaa55559019a72ba}{%
+           family={Béjaoui},
+           familyi={B\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4279dd9cf989d5bd38b7ae9770327adc}{%
+           family={Dauphin},
+           familyi={D\bibinitperiod},
+           given={Anyck},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley & Sons, Ltd.}%
+      }
+      \strng{namehash}{c97eda426d9393b8a2d35af07fb3b9ed}
+      \strng{fullhash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{fullhashraw}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{bibnamehash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{authorbibnamehash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{authornamehash}{c97eda426d9393b8a2d35af07fb3b9ed}
+      \strng{authorfullhash}{e67560d3fbd506fb2e14f8233674c163}
+      \strng{authorfullhashraw}{e67560d3fbd506fb2e14f8233674c163}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1099-1751}
+      \field{journaltitle}{The International Journal of Health Planning and Management}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{Critical analysis of nurses' labour market effectiveness in Canada: The hidden aspects of the shortage}
+      \field{volume}{34}
+      \field{year}{2019}
+      \field{pages}{1144\bibrangedash 1154}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/hpm.2772
+      \endverb
+      \verb{eprint}
+      \verb https://pubmed.ncbi.nlm.nih.gov/30945352/
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1002/hpm.2772
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1002/hpm.2772
+      \endverb
+    \endentry
+    \entry{Davenport2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f7f48ae3aa9f7699a29a2d4306a52421}{%
+           family={Davenport},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=42bb1b0e40a6926c8ef47198451d1fcb}{%
+           family={Kalakota},
+           familyi={K\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{fullhash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{fullhashraw}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{bibnamehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authorbibnamehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authornamehash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authorfullhash}{79c8feaea2760c38932efe52a245c7b6}
+      \strng{authorfullhashraw}{79c8feaea2760c38932efe52a245c7b6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2514-6645}
+      \field{journaltitle}{Future Healthcare Journal}
+      \field{number}{2}
+      \field{title}{The potential for artificial intelligence in healthcare}
+      \field{volume}{6}
+      \field{year}{2019}
+      \field{pages}{94\bibrangedash 98}
+      \range{pages}{5}
+      \verb{doi}
+      \verb https://doi.org/10.7861/futurehosp.6-2-94
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2514664524010592
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2514664524010592
+      \endverb
+      \keyw{Artificial intelligence,clinical decision support,electronic health record systems}
+    \endentry
+    \entry{Depasse1998}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9f80e473ef89e8694fed5141d0fb2034}{%
+           family={Depasse},
+           familyi={D\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f9b4c539b9d66629cdb916ef4ef5292}{%
+           family={Pauwels},
+           familyi={P\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0164a7cf5ca2366cf48ae99a20ebe564}{%
+           family={Somers},
+           familyi={S\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=367146bedad4d029bb8be1c6a1e323fd}{%
+           family={Vincent},
+           familyi={V\bibinitperiod},
+           given={J.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cea06baec390919d5810a4c5041a1969}
+      \strng{fullhash}{d62380446d96428c18eb1abc01337b94}
+      \strng{fullhashraw}{d62380446d96428c18eb1abc01337b94}
+      \strng{bibnamehash}{d62380446d96428c18eb1abc01337b94}
+      \strng{authorbibnamehash}{d62380446d96428c18eb1abc01337b94}
+      \strng{authornamehash}{cea06baec390919d5810a4c5041a1969}
+      \strng{authorfullhash}{d62380446d96428c18eb1abc01337b94}
+      \strng{authorfullhashraw}{d62380446d96428c18eb1abc01337b94}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0342-4642}
+      \field{journaltitle}{Intensive Care Medicine}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{A profile of European ICU nursing}
+      \field{volume}{24}
+      \field{year}{1998}
+      \field{pages}{939\bibrangedash 945}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/s001340050693
+      \endverb
+    \endentry
+    \entry{Karalis2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=63f1d44a7206e7e736f033a3ebf48a77}{%
+           family={Karalis},
+           familyi={K\bibinitperiod},
+           given={Vangelis\bibnamedelima D.},
+           giveni={V\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{fullhash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{fullhashraw}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{bibnamehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authorbibnamehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authornamehash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authorfullhash}{63f1d44a7206e7e736f033a3ebf48a77}
+      \strng{authorfullhashraw}{63f1d44a7206e7e736f033a3ebf48a77}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2813-0464}
+      \field{journaltitle}{Applied Biosciences}
+      \field{number}{1}
+      \field{title}{The Integration of Artificial Intelligence into Clinical Practice}
+      \field{volume}{3}
+      \field{year}{2024}
+      \field{pages}{14\bibrangedash 44}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.3390/applbiosci3010002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2813-0464/3/1/2
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2813-0464/3/1/2
+      \endverb
+    \endentry
+    \entry{Leyton2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=702359c40a4fd41e85ea8e1aff4f6859}{%
+           family={Lazo},
+           familyi={L\bibinitperiod},
+           given={Wilfredo\bibnamedelima Leyton},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6060a3d919bd62e17ef5736f78459952}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Clara\bibnamedelima López},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Osorno, Chile}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Universidad de Los Lagos}%
+      }
+      \strng{namehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{fullhash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{fullhashraw}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{bibnamehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authorbibnamehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authornamehash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authorfullhash}{58a5f13531221beeca44c2a1a4470c56}
+      \strng{authorfullhashraw}{58a5f13531221beeca44c2a1a4470c56}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-956-6043-18-8}
+      \field{title}{Manual de signos vitales en la población pediátrica}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.32735/978-956-6043-18-8/2020
+      \endverb
+      \verb{urlraw}
+      \verb https://editorial.ulagos.cl/wp-content/uploads/2021/04/Manual-de-signos-vitales-en-la-poblacion-pediatrica.pdf
+      \endverb
+      \verb{url}
+      \verb https://editorial.ulagos.cl/wp-content/uploads/2021/04/Manual-de-signos-vitales-en-la-poblacion-pediatrica.pdf
+      \endverb
+    \endentry
+    \entry{Varnosfaderani2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b17b8b86c7b5117afcce89b9240d4ebd}{%
+           family={Maleki\bibnamedelima Varnosfaderani},
+           familyi={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Shiva},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8f972354ef8b1760eeb8bcd0a8c19b8}{%
+           family={Forouzanfar},
+           familyi={F\bibinitperiod},
+           given={Mohamad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{fullhash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{fullhashraw}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{bibnamehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authorbibnamehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authornamehash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authorfullhash}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \strng{authorfullhashraw}{63e3d9bdb4ca27c94e8ccd90ebb52fe4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2306-5354}
+      \field{journaltitle}{Bioengineering}
+      \field{month}{3}
+      \field{number}{4}
+      \field{title}{The Role of AI in Hospitals and Clinics: Transforming Healthcare in the 21st Century}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{337}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/bioengineering11040337
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.3390/bioengineering11040337
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.3390/bioengineering11040337
+      \endverb
+    \endentry
+    \entry{MinistryHealth2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=10ae01772ad698a66bed4068548f4b6e}{%
+           family={{Ministerio de Salud de la provincia de Columbia}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{fullhash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{fullhashraw}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{bibnamehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authorbibnamehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authornamehash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authorfullhash}{10ae01772ad698a66bed4068548f4b6e}
+      \strng{authorfullhashraw}{10ae01772ad698a66bed4068548f4b6e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{Ratio Definitions for Hospital Sector - Province of British Columbia}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/mnpr/mnpr-ratio-definitions
+      \endverb
+      \verb{url}
+      \verb https://www2.gov.bc.ca/gov/content/health/practitioner-professional-resources/mnpr/mnpr-ratio-definitions
+      \endverb
+    \endentry
+    \entry{oecd2024society}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bdbed435a416a918aa494017fda4c7fb}{%
+           family={{OECD}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris}%
+      }
+      \strng{namehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{fullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{bibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorbibnamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authornamehash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhash}{bdbed435a416a918aa494017fda4c7fb}
+      \strng{authorfullhashraw}{bdbed435a416a918aa494017fda4c7fb}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Society at a Glance 2024: OECD Social Indicators}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1787/918d8db3-en
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1787/918d8db3-en
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1787/918d8db3-en
+      \endverb
+    \endentry
+    \entry{htmcore2019}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e7ae89bab88c0e410abcbd0cd1706cbc}{%
+           family={Otahal},
+           familyi={O\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04df70c608794252329af37b33f3bc45}{%
+           family={Keeney},
+           familyi={K\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b21d058fa414ed3b54a932ff1fc18a5}{%
+           family={McDougall},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Github}%
+      }
+      \strng{namehash}{8a2ccda2ffe3f1d2f115c02d9b19bb35}
+      \strng{fullhash}{7bfbafa312467458c75785126af49fa6}
+      \strng{fullhashraw}{7bfbafa312467458c75785126af49fa6}
+      \strng{bibnamehash}{7bfbafa312467458c75785126af49fa6}
+      \strng{authorbibnamehash}{7bfbafa312467458c75785126af49fa6}
+      \strng{authornamehash}{8a2ccda2ffe3f1d2f115c02d9b19bb35}
+      \strng{authorfullhash}{7bfbafa312467458c75785126af49fa6}
+      \strng{authorfullhashraw}{7bfbafa312467458c75785126af49fa6}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Implementation of cortical algorithms based on HTM theory in C++ \& Python. Research \& development library.}
+      \field{howpublished}{\url{https://github.com/htm-community/htm.core/}}
+      \field{journaltitle}{Github repository}
+      \field{series}{{Community edition}}
+      \field{title}{{HTM.core implementation of Hierarchical Temporal Memory}}
+      \field{year}{2019}
+      \keyw{HTM; Hierarchical Temporal Memory; NuPIC; Numenta; cortical algorithm; sparse distributed representation; anomaly; prediction; bioinspired; neuromorphic}
+    \endentry
+    \entry{Pieroni2023}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8ffbbcb272bb0e587f6756bf919bfe01}{%
+           family={Pieroni},
+           familyi={P\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=16202dba54e210124606dddba74d56ad}{%
+           family={Oiler},
+           familyi={O\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e2e612aea9c9fcf10e7df3a39990c77a}{%
+           family={Ortega-Martorell},
+           familyi={O\bibinithyphendelim M\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=250e83f7b6bafafaa7320345847f281a}{%
+           family={Lip},
+           familyi={L\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=db36c764e20fa6a5beac28447096dfcc}{%
+           family={Welters},
+           familyi={W\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Liverpool John Moores University}%
+      }
+      \strng{namehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{fullhash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{fullhashraw}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{bibnamehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authorbibnamehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authornamehash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authorfullhash}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{authorfullhashraw}{8ffbbcb272bb0e587f6756bf919bfe01}
+      \strng{editorbibnamehash}{7315a453ccb04111835a192fcf2f5c01}
+      \strng{editornamehash}{784f04c4709932ed23e911d8874f812c}
+      \strng{editorfullhash}{7315a453ccb04111835a192fcf2f5c01}
+      \strng{editorfullhashraw}{7315a453ccb04111835a192fcf2f5c01}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Machine Learning Modelling of Critical Care Patients in the Intensive Care Units}
+      \field{type}{phdthesis}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.24377/LJMU.t.00019587
+      \endverb
+      \verb{urlraw}
+      \verb https://researchonline.ljmu.ac.uk/id/eprint/19587/
+      \endverb
+      \verb{url}
+      \verb https://researchonline.ljmu.ac.uk/id/eprint/19587/
+      \endverb
+      \keyw{Machine Learning; AI; ICU; Sepsis; Cardiovascular; Atrial Fibrillation; Critical Care; Intensive Care}
+    \endentry
+    \entry{Rush2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cb6ddc38ac4934a5d3568dea8eb8880e}{%
+           family={Rush},
+           familyi={R\bibinitperiod},
+           given={Barret},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0e3dac1adc983d78b53e594ecb6d1dc}{%
+           family={Celi},
+           familyi={C\bibinitperiod},
+           given={Leo\bibnamedelima Anthony},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ff4ab1d379832d3edee28194fb4e7b2}{%
+           family={Stone},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{d909dadcb0c62afd30c0999b18ae1a15}
+      \strng{fullhash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{fullhashraw}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{bibnamehash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{authorbibnamehash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{authornamehash}{d909dadcb0c62afd30c0999b18ae1a15}
+      \strng{authorfullhash}{71b52ac7a99122f805ed80ea71eb3410}
+      \strng{authorfullhashraw}{71b52ac7a99122f805ed80ea71eb3410}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-2614}
+      \field{journaltitle}{Journal of Clinical Monitoring and Computing}
+      \field{month}{11}
+      \field{number}{5}
+      \field{title}{Applying machine learning to continuously monitored physiological data}
+      \field{volume}{33}
+      \field{year}{2018}
+      \field{pages}{887\bibrangedash 893}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/s10877-018-0219-z
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s10877-018-0219-z
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s10877-018-0219-z
+      \endverb
+    \endentry
+    \entry{Vargas2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eee8d7f9abbe8849d9f3c16e6f947fc8}{%
+           family={Vargas},
+           familyi={V\bibinitperiod},
+           given={Guido\bibnamedelima Enrique},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{fullhash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{fullhashraw}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{bibnamehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authorbibnamehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authornamehash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authorfullhash}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \strng{authorfullhashraw}{eee8d7f9abbe8849d9f3c16e6f947fc8}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://hdl.handle.net/1992/68734}}
+      \field{title}{{MAD-VitalS: Solución de inteligencia artificial para el monitoreo y detección de anomalías en signos vitales de pacientes en UCIP en tiempo real}}
+      \field{year}{2023}
+    \endentry
+    \entry{zhang2023interpretable}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=17a0288dfc434ca54a825120c46148d6}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={T-Y},
+           giveni={T\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=933efa88cdd3918ff5244918e6b0cf08}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d9d1f0d938c2cbfb899083d3cbe3b5c1}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Y-Z},
+           giveni={Y\bibinithyphendelim Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=371885733f35cc5137437d865409a201}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={M-W},
+           giveni={M\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Eur Rev Med Pharmacol Sci}%
+      }
+      \strng{namehash}{f4996d168f20aea3d197268a8b44cf65}
+      \strng{fullhash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{fullhashraw}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{bibnamehash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{authorbibnamehash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{authornamehash}{f4996d168f20aea3d197268a8b44cf65}
+      \strng{authorfullhash}{38ba3c36f462c18d4123f53ea023a21e}
+      \strng{authorfullhashraw}{38ba3c36f462c18d4123f53ea023a21e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2284-0729}
+      \field{journaltitle}{European Review for Medical and Pharmacological Sciences}
+      \field{number}{10}
+      \field{title}{An interpretable machine learning model for real-time sepsis prediction based on basic physiological indicators}
+      \field{volume}{27}
+      \field{year}{2023}
+      \field{pages}{4348\bibrangedash 4356}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.26355/eurrev_202305_32439
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

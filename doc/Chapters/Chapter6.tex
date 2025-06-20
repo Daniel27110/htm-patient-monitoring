@@ -17,7 +17,25 @@ Para facilitar la comparación, este número de signos vitales fuera de rango se
   \label{fig:patient3_signos_vitales_fuera_de_rango}
 \end{figure}
 
-A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la exactitud y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica.
+A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la exactitud y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica.A continuación, se presentan los rangos de normalidad de los signos vitales para cada grupo etario, que se utilizarán como referencia para la validación del modelo.
+
+\begin{table}[H]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lccccc}
+      \rowcolor[HTML]{AFB8CC}
+      \textbf{Signo Vital} & \textbf{0-1 años} & \textbf{1-3 años} & \textbf{4-5 años} & \textbf{6-12 años} & \textbf{13-18 años} \\
+      \rowcolor[HTML]{E8E8E8}
+      ARTs (mmHg) & 60--90 & 78--112 & 85--114 & 95--135 & 100--120 \\
+      ARTd (mmHg) & 30--62 & 48--78 & 52--85 & 58--88 & 60--80 \\
+      FC (lpm)    & 100--160 & 95--150 & 80--140 & 70--120 & 60--100 \\
+      Resp (rpm)  & 30--60 & 24--40 & 22--34 & 18--30 & 12--16 \\
+      SpO$_2$ (\%) & 88--100 & 88--100 & 88--100 & 88--100 & 88--100 \\
+    \end{tabular}%
+  }
+  \caption{Rangos normales de signos vitales según grupo etario. ARTs: Presión arterial sistólica; ARTd: Presión arterial diastólica; FC: Frecuencia cardíaca; Resp: Frecuencia respiratoria; SpO$_2$: Saturación de oxígeno.}
+  \label{tab:rangos_signos_vitales}
+\end{table}
 
 \section{Resultados}
 
@@ -38,13 +56,19 @@ Para ilustrar esta comparación, la Figura \ref{fig:comparacion_clasificacion_pa
 
 A partir de esta comparación, se observa que el indicador de criticidad propuesto logra identificar correctamente los periodos de alto riesgo fisiológico en la mayoría de los casos, coincidiendo con los momentos donde la mayoría de los signos vitales se encuentran por fuera del rango normal. Además, el modelo muestra una buena capacidad para discriminar entre situaciones de riesgo medio y bajo, reflejando adecuadamente las fluctuaciones en el estado del paciente a lo largo del tiempo.
 
-A continuación, la Tabla \ref{tab:resultados_cuantitativos} resume los resultados cuantitativos obtenidos para todos los pacientes incluidos en la validación. Para cada paciente, se calcula la precisión del modelo, que se define como la proporción de instantes en los que el indicador de criticidad coincide con la categoría de riesgo asignada a partir del número de signos vitales fuera de rango. Además, nos interesa conocer la exactitud, que se define como la proporción de instantes en los que el modelo clasifica correctamente el estado del paciente como alto, medio o bajo riesgo.
+A continuación, la Tabla \ref{tab:resultados_cuantitativos} resume los resultados cuantitativos obtenidos para todos los pacientes incluidos en la validación. En este contexto, la precisión se refiere a la proporción de instantes en los que el indicador de criticidad predicho por el modelo coincide exactamente con la categoría de riesgo determinada a partir del número de signos vitales fuera de rango. Es decir, mide qué tan confiables son las alertas generadas por el modelo: de todas las veces que el modelo indicó un cierto nivel de riesgo, cuántas veces esa alerta fue correcta. Matemáticamente, la precisión se calcula como:
+
+$$ \text{Precisión} = \frac{\text{Número de verdaderos positivos}}{\text{Número de verdaderos positivos} + \text{Número de falsos positivos}} $$
+
+Por otro lado, la exactitud (también conocida como\textit{recall}) mide la proporción de instantes en los que el modelo logra identificar correctamente todos los casos reales de una determinada categoría de riesgo. Es decir, de todos los momentos en los que el paciente realmente estuvo en riesgo alto, medio o bajo, cuántos fueron correctamente detectados por el modelo. Matemáticamente, la exactitud se calcula como:
+
+$$ \text{Exactitud} = \frac{\text{Número de verdaderos positivos}}{\text{Número de verdaderos positivos} + \text{Número de falsos negativos}} $$
 
 Cabe destacar que para el cálculo de las métricas cuantitativas presentadas se empleó la librería \textit{sklearn.metrics} de Python. En este proceso, se construyó un arreglo que representa la categoría de riesgo (alto, medio o bajo) en cada instante de tiempo, definida a partir del número de signos vitales fuera del rango normal, el cual se considera como el valor de referencia o ``valor de verdad'' para la validación. Este arreglo se compara directamente con el arreglo de categorías de riesgo asignadas por el indicador de criticidad generado por el modelo propuesto. De esta manera, se obtienen las métricas de precisión y exactitud para cada paciente, permitiendo una evaluación objetiva del rendimiento del modelo.
 
 \begin{table}[H]
   \centering
-  \resizebox{0.95\textwidth}{!}{%
+  \resizebox{0.85\textwidth}{!}{%
     \begin{tabular}{
         >{\columncolor[HTML]{E8E8E8}}l
       llll}
@@ -81,7 +105,7 @@ No obstante, esta suposición no es del todo correcta para pacientes que mantien
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Images/comparacion_indicador_con_fuera_de_rango_paciente_7.png}
-  \caption{Comparación de la clasificación de criticidad para el paciente 7: indicador de criticidad vs. número de signos vitales fuera de rango.}
+  \caption{Comparación de la clasificación de criticidad para el paciente 7: indicador de criticidad vs. número de signos vitales fuera de rango. El modelo subestima el riesgo al asumir que una baja variabilidad implica un estado de bajo riesgo, a pesar la mayoría de los signos vitales están fuera de rango.}
 
   \label{fig:comparacion_clasificacion_paciente7}
 \end{figure}
@@ -94,7 +118,7 @@ Adicionalmente, se realizó este mismo procedimiento de validación para el mode
 
 \begin{table}[H]
   \centering
-  \resizebox{0.95\textwidth}{!}{%
+  \resizebox{0.85\textwidth}{!}{%
     \begin{tabular}{
         >{\columncolor[HTML]{E8E8E8}}l
       llll}
@@ -168,3 +192,73 @@ Para validar este resultado entre todos los pacientes, se realizó un análisis 
 Los resultados muestran que el modelo de subespacios genera significativamente menos falsas alertas en comparación con el modelo original. En total, se reportaron 1066 instantes con falsas alertas por parte del modelo de subespacios, mientras que el modelo original generó 1738 instantes de falsas alertas. Esto representa una reducción del 38,7\% en la cantidad de alertas innecesarias, lo cual es un resultado significativo considerando la importancia de minimizar la sobrecarga de alarmas en entornos clínicos.
 
 En general, los resultados cualitativos indican que el modelo de búsqueda en subespacios no solo mejora la precisión en la detección de anomalías, sino que también proporciona alertas más útiles y relevantes para el personal médico. Al asociar cada alerta a una pareja específica de señales fisiológicas, se facilita la identificación de patrones críticos y se optimiza la respuesta clínica, contribuyendo así a una atención más efectiva y centrada en el paciente. Por otra parte, la reducción de falsas alertas permite mejorar la confianza del personal médico en el sistema de monitoreo, al disminuir la cantidad de notificaciones irrelevantes que pueden generar distracción o fatiga ante alarmas.
+
+\section{Código de validación}
+
+A continuación se presenta el código utilizado para realizar la validación del modelo de detección de anomalías en subespacios, incluyendo la categorización de los datos y el cálculo de las métricas de precisión, exactitud, F1-Score y F2-Score. Este código utiliza las librerías \textit{pandas} y \textit{sklearn.metrics} de Python para procesar los datos y calcular las métricas de validación.
+
+\begin{minted}[fontsize=\small, linenos, breaklines]{python}
+import pandas as pd
+from sklearn.metrics import classification_report, f1_score, fbeta_score
+
+# El DataFrame patient_data contiene, para cada instante de tiempo, la columna 'Normalized Vitals', que representa la cantidad de signos vitales fuera de su rango normal, dividida por el número total de signos vitales disponibles para ese paciente. De esta manera, el valor está normalizado entre 0 y 1, indicando la proporción de signos vitales alterados en cada momento.
+
+# Por otro lado, el DataFrame indicator_data incluye la columna 'Normalized Indicator', que corresponde al valor del indicador de criticidad en cada instante, normalizado por el número de subespacios disponibles en ese momento. Así, este valor también se encuentra entre 0 y 1 y permite comparar la criticidad detectada por el modelo con la proporción de signos vitales alterados.
+
+def categorize_vitals_and_indicator(patient_data, indicator_data):
+    """
+    Categoriza los valores normalizados del indicador de criticidad y del numero de signos vitales fuera de rango en tres categorías: bajo, medio y alto, según umbrales definidos.
+    """
+    low_th = 0.3
+    high_th = 0.6
+
+    # Categoría para anomalías normalizadas
+    patient_data['True Category'] = pd.cut(
+        patient_data['Normalized Vitals'],
+        bins=[-float('inf'), low_th, high_th, float('inf')],
+        labels=['Low', 'Medium', 'High']
+    )
+
+    # Categoría para el indicador
+    indicator_data['Indicator Category'] = pd.cut(
+        indicator_data['Normalized Indicator'],
+        bins=[-float('inf'), low_th, high_th, float('inf')],
+        labels=['Low', 'Medium', 'High']
+    )
+
+    # Sincroniza ambos DataFrames
+    comparison_df = pd.DataFrame({
+        'Start Time': indicator_data['Start Time'].values,
+        'End Time': indicator_data['End Time'].values,
+        'True Category': patient_data['True Category'].values,
+        'Indicator Category': indicator_data['Indicator Category'].values
+      })
+
+    return comparison_df
+
+def calculate_metrics(comparison_df):
+    """
+    Calcula precisión, recall, F1 y F2-score usando sklearn.metrics.
+    """
+    report = classification_report(
+        comparison_df['True Category'],
+        comparison_df['Indicator Category'],
+        output_dict=True,
+        zero_division=0
+    )
+    f1 = f1_score(comparison_df['True Category'], comparison_df['Indicator Category'], average='weighted')
+    f2 = fbeta_score(comparison_df['True Category'], comparison_df['Indicator Category'], beta=2, average='weighted')
+
+    return report['weighted avg']['precision'], report['weighted avg']['recall'], f1, f2
+
+def count_false_positives(comparison_df)
+   """
+    Cuenta los falsos positivos: instantes donde el indicador predice anomalía pero no hay anomalía real.
+    """
+    return ((comparison_df[indicator_col] != 'Low') & (comparison_df['True Category'] == 'Low')).sum()
+
+# Calcula las métricas de validación
+comparison_df = categorize_vitals_and_indicator(patient_data, indicator_data)
+precision, recall, f1, f2 = calculate_metrics(comparison_df)
+false_positives = count_false_positives(comparison_df)
+\end{minted}
