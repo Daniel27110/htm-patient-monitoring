@@ -17,7 +17,7 @@ Para facilitar la comparación, este número de signos vitales fuera de rango se
   \label{fig:patient3_signos_vitales_fuera_de_rango}
 \end{figure}
 
-A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la exactitud y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica.A continuación, se presentan los rangos de normalidad de los signos vitales para cada grupo etario, que se utilizarán como referencia para la validación del modelo.
+A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la sensibilidad y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica.A continuación, se presentan los rangos de normalidad de los signos vitales para cada grupo etario, que se utilizarán como referencia para la validación del modelo.
 
 \begin{table}[H]
   \centering
@@ -60,11 +60,11 @@ A continuación, la Tabla \ref{tab:resultados_cuantitativos} resume los resultad
 
 $$ \text{Precisión} = \frac{\text{Número de verdaderos positivos}}{\text{Número de verdaderos positivos} + \text{Número de falsos positivos}} $$
 
-Por otro lado, la exactitud (también conocida como\textit{recall}) mide la proporción de instantes en los que el modelo logra identificar correctamente todos los casos reales de una determinada categoría de riesgo. Es decir, de todos los momentos en los que el paciente realmente estuvo en riesgo alto, medio o bajo, cuántos fueron correctamente detectados por el modelo. Matemáticamente, la exactitud se calcula como:
+Por otro lado, la sensibilidad (también conocida como\textit{recall}) mide la proporción de instantes en los que el modelo logra identificar correctamente todos los casos reales de una determinada categoría de riesgo. Es decir, de todos los momentos en los que el paciente realmente estuvo en riesgo alto, medio o bajo, cuántos fueron correctamente detectados por el modelo. Matemáticamente, la sensibilidad se calcula como:
 
-$$ \text{Exactitud} = \frac{\text{Número de verdaderos positivos}}{\text{Número de verdaderos positivos} + \text{Número de falsos negativos}} $$
+$$ \text{Sensibilidad} = \frac{\text{Número de verdaderos positivos}}{\text{Número de verdaderos positivos} + \text{Número de falsos negativos}} $$
 
-Cabe destacar que para el cálculo de las métricas cuantitativas presentadas se empleó la librería \textit{sklearn.metrics} de Python. En este proceso, se construyó un arreglo que representa la categoría de riesgo (alto, medio o bajo) en cada instante de tiempo, definida a partir del número de signos vitales fuera del rango normal, el cual se considera como el valor de referencia o ``valor de verdad'' para la validación. Este arreglo se compara directamente con el arreglo de categorías de riesgo asignadas por el indicador de criticidad generado por el modelo propuesto. De esta manera, se obtienen las métricas de precisión y exactitud para cada paciente, permitiendo una evaluación objetiva del rendimiento del modelo.
+Cabe destacar que para el cálculo de las métricas cuantitativas presentadas se empleó la librería \textit{sklearn.metrics} de Python. En este proceso, se construyó un arreglo que representa la categoría de riesgo (alto, medio o bajo) en cada instante de tiempo, definida a partir del número de signos vitales fuera del rango normal, el cual se considera como el valor de referencia o ``valor de verdad'' para la validación. Este arreglo se compara directamente con el arreglo de categorías de riesgo asignadas por el indicador de criticidad generado por el modelo propuesto. De esta manera, se obtienen las métricas de precisión y sensibilidad para cada paciente, permitiendo una evaluación objetiva del rendimiento del modelo.
 
 \begin{table}[H]
   \centering
@@ -72,7 +72,7 @@ Cabe destacar que para el cálculo de las métricas cuantitativas presentadas se
     \begin{tabular}{
         >{\columncolor[HTML]{E8E8E8}}l
       llll}
-      \cellcolor[HTML]{AFB8CC}Id                 & \cellcolor[HTML]{AFB8CC}Precisión & \cellcolor[HTML]{AFB8CC}Exactitud & \cellcolor[HTML]{AFB8CC}F1-Score & \cellcolor[HTML]{AFB8CC}F2-Score \\
+      \cellcolor[HTML]{AFB8CC}Id                 & \cellcolor[HTML]{AFB8CC}Precisión & \cellcolor[HTML]{AFB8CC}Sensibilidad & \cellcolor[HTML]{AFB8CC}F1-Score & \cellcolor[HTML]{AFB8CC}F2-Score \\
       Paciente 1                                 & 0,31                              & 0,43                              & 0,31                             & 0,36                             \\
       Paciente 2                                 & 0,93                              & 0,95                              & 0,95                             & 0,95                             \\
       Paciente 3                                 & 0,98                              & 0,93                              & 0,95                             & 0,94                             \\
@@ -87,7 +87,7 @@ Cabe destacar que para el cálculo de las métricas cuantitativas presentadas se
   \label{tab:resultados_cuantitativos}
 \end{table}
 
-Los resultados muestran que el modelo presenta una precisión promedio del 66\% y una exactitud del 58\%, lo que indica que, en general, el indicador de criticidad logra clasificar correctamente el estado del paciente en la mayoría de los casos. Sin embargo, se observan variaciones significativas entre los diferentes pacientes, con algunos casos como el Paciente 2 y el Paciente 3 alcanzando precisiones superiores al 90\%, mientras que otros como el Paciente 4 y el Paciente 7 presentan resultados más bajos.
+Los resultados muestran que el modelo presenta una precisión promedio del 66\% y una sensibilidad del 58\%, lo que indica que, en general, el indicador de criticidad logra clasificar correctamente el estado del paciente en la mayoría de los casos. Sin embargo, se observan variaciones significativas entre los diferentes pacientes, con algunos casos como el Paciente 2 y el Paciente 3 alcanzando precisiones superiores al 90\%, mientras que otros como el Paciente 4 y el Paciente 7 presentan resultados más bajos.
 
 Estos hallazgos sugieren que el modelo es más efectivo en algunos pacientes que en otros, lo cual podría deberse a factores como la variabilidad individual en los signos vitales o la presencia de condiciones clínicas específicas que afectan la interpretación de los datos. No obstante, al estudiar estos casos de forma más detallada, se puede observar que estos están siendo influenciados por la suposición de que una baja variabilidad en los signos vitales implica un estado de bajo riesgo. Esta suposición, aunque válida en muchos casos, no se aplica universalmente a todos los pacientes.
 
@@ -110,7 +110,7 @@ No obstante, esta suposición no es del todo correcta para pacientes que mantien
   \label{fig:comparacion_clasificacion_paciente7}
 \end{figure}
 
-Estos resultados resaltan la importancia de considerar el contexto clinico del paciente al interpretar los datos de signos vitales y al aplicar el modelos de detección de anomalías con el objetivo de clasificar correctamente su estado de salud. En particular, es fundamental reconocer que la baja variabilidad en los signos vitales no siempre indica un estado de bajo riesgo, especialmente en pacientes con condiciones crónicas o inestables. Por lo tanto, se sugiere que futuras investigaciones consideren incorporar información clínica adicional y ajustar el modelo para mejorar su capacidad de adaptación a diferentes perfiles de pacientes.
+Estos resultados resaltan la importancia de considerar el contexto clínico del paciente al interpretar los datos de signos vitales y al aplicar el modelos de detección de anomalías con el objetivo de clasificar correctamente su estado de salud. En particular, es fundamental reconocer que la baja variabilidad en los signos vitales no siempre indica un estado de bajo riesgo, especialmente en pacientes con condiciones crónicas o inestables. Por lo tanto, se sugiere que futuras investigaciones consideren incorporar información clínica adicional y ajustar el modelo para mejorar su capacidad de adaptación a diferentes perfiles de pacientes.
 
 Para complementar el análisis cuantitativo, también se calcularon las métricas F1-Score y F2-Score, que proporcionan una medida más equilibrada entre precisión y recall. Estas métricas son especialmente útiles en contextos donde es importante minimizar tanto los falsos positivos como los falsos negativos. Los resultados de estas métricas se presentan en la última dos columnas de la Tabla \ref{tab:resultados_cuantitativos}, mostrando un rendimiento promedio del modelo en torno al 54\% para F1-Score y 55\% para F2-Score. Estos valores indican que, aunque el modelo logra una clasificación razonablemente precisa, aún existen oportunidades de mejora en su capacidad para identificar correctamente los estados de criticidad del paciente.
 
@@ -195,7 +195,7 @@ En general, los resultados cualitativos indican que el modelo de búsqueda en su
 
 \section{Código de validación}
 
-A continuación se presenta el código utilizado para realizar la validación del modelo de detección de anomalías en subespacios, incluyendo la categorización de los datos y el cálculo de las métricas de precisión, exactitud, F1-Score y F2-Score. Este código utiliza las librerías \textit{pandas} y \textit{sklearn.metrics} de Python para procesar los datos y calcular las métricas de validación.
+A continuación se presenta el código utilizado para realizar la validación del modelo de detección de anomalías en subespacios, incluyendo la categorización de los datos y el cálculo de las métricas de precisión, sensibilidad, F1-Score y F2-Score. Este código utiliza las librerías \textit{pandas} y \textit{sklearn.metrics} de Python para procesar los datos y calcular las métricas de validación.
 
 \begin{minted}[fontsize=\small, linenos, breaklines]{python}
 import pandas as pd
