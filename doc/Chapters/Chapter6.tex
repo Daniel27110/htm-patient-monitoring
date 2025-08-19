@@ -17,7 +17,7 @@ Para realizar esta comparación, el número de signos vitales fuera de rango se 
   \label{fig:patient3_signos_vitales_fuera_de_rango}
 \end{figure}
 
-A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la sensibilidad y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica.A continuación, se presentan los rangos de normalidad de los signos vitales para cada grupo etario, que se utilizarán como referencia para la validación del modelo.
+A partir de esta categorización, se determina si el modelo clasificó correctamente el estado del paciente en los diferentes instantes de tiempo, comparando la categoría de riesgo asignada por el modelo con la obtenida a partir de los signos vitales reales. Esto permite calificar la sensibilidad y precisión de los resultados del modelo, evaluando su capacidad para discriminar entre situaciones de mayor y menor criticidad fisiológica. A continuación, se presentan los rangos de normalidad de los signos vitales para cada grupo etario según la Asociación Española de Pediatría \parencite{aeped2020}, los cuales se utilizarán como referencia para la validación del modelo.
 
 \begin{table}[H]
   \centering
@@ -114,7 +114,7 @@ Estos resultados resaltan la importancia de considerar el contexto clínico del 
 
 Para complementar el análisis cuantitativo, también se calcularon las métricas F1-Score y F2-Score, que proporcionan una medida más equilibrada entre precisión y recall. Estas métricas son especialmente útiles en contextos donde es importante minimizar tanto los falsos positivos como los falsos negativos. Los resultados de estas métricas se presentan en la última dos columnas de la Tabla \ref{tab:resultados_cuantitativos}, mostrando un rendimiento promedio del modelo en torno al 54\% para F1-Score y 55\% para F2-Score. Estos valores indican que, aunque el modelo logra una clasificación razonablemente precisa, aún existen oportunidades de mejora en su capacidad para identificar correctamente los estados de criticidad del paciente.
 
-Adicionalmente, se realizó este mismo procedimiento de validación para el modelo de detección de anomalías anterior realizado por \cite{Vargas2023}, el cual se basa en la identificación de patrones anómalos en el espacio completo de las señales fisiológicas. Los resultados obtenidos para este modelo se presentan en la Tabla \ref{tab:resultados_cuantitativos_anterior}, permitiendo una comparación directa con el modelo basado en subespacios para el mismo conjunto de pacientes.
+Adicionalmente, se realizó este mismo procedimiento de validación para el modelo de detección de anomalías anterior realizado por \textcite{Vargas2023}, el cual se basa en la identificación de patrones anómalos en el espacio completo de las señales fisiológicas. Los resultados obtenidos para este modelo se presentan en la Tabla \ref{tab:resultados_cuantitativos_anterior}, permitiendo una comparación directa con el modelo basado en subespacios para el mismo conjunto de pacientes.
 
 \begin{table}[H]
   \centering
